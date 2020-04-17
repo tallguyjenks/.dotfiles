@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# Notification
+notify-send "$(runes 'your email')" "$(runes 'now opening up your email applications')"
+
+# Open my email
+protonmail-bridge & disown
+
+# PPPID=$(awk '{print $4}' "/proc/$PPID/stat")
+# kill $PPPID
+
+neomutt
+

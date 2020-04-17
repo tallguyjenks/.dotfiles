@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+#==============================================================#
+#
+# AUTHOR:
+#     Bryan Jenks
+#         - www.bryanjenks.xyz
+#         - https://github.com/tallguyjenks/flash.sh
+#
+# SOURCE:
+#     This file is based off of the one presented in this YouTube Video by nixcasts:
+#         - https://www.youtube.com/watch?v=lX8jqo70r1I
+#
+# PURPOSE:
+#     To have a command line flash card tool with minimal code, plain text input and output
+#
+# VISION:
+#     The goal i have for this script is a basic level emulation of ANKI to where i have a way to
+#     keep track of a score for each item in each selected deck so that it can pick from a selection
+#     of the lowest scoring items and shuf them to the user for reenforcement of active recall.
+#
+# DEPENDENCIES:
+#     fzf - https://github.com/junegunn/fzf
+#     bat - https://github.com/sharkdp/bat
+#==============================================================#
+
+DIR_MADE_MSG="
+Your '~/.local/share/flash' directory has been made and
+your 'deck.csv' file is ready for you to enter your flashcard data
+"
+PWD="$(pwd)" # Remember User's Starting Directory
+DIR="$HOME/.local/share/flash" # Where Decks Are Located
+COUNTER=0
+NO_DECKS="
+No decks were found, please make a new deck
+using ':' as a delimiter in a '.csv' file in
+the '.local/share/flash' directory.
+"
+TEMPLATE_DECK="$HOME/.local/share/flash/deck.csv"
+
+if [ ! -d $DIR ];then # If Directory does NOT exist
+    echo "No '.local/share/flash' directory, make it? y/n"
+    read RESPONSE
+        case "$RESPONSE" in
+            n) exit ;;
+            N) exit ;;
+            q) exit ;;
+            Q) exit ;;
+            y) mkdir $DIR && touch $TEMPLATE_DECK && echo "category1:question1:answer1" >> $TEMPLATE_DECK && echo "category2:question2:answer2" >> $TEMPLATE_DECK && echo "category3:question3:answer3" >> $TEMPLATE_DECK && echo "$DIR_MADE_MSG" ;;
+            Y) mkdir $DIR && touch $TEMPLATE_DECK && echo "category1:question1:answer1" >> $TEMPLATE_DECK && echo "category2:question2:answer2" >> $TEMPLATE_DECK && echo "category3:question3:answer3" >> $TEMPLATE_DECK && echo "$DIR_MADE_MSG" ;;
+            *) echo "invalid choice, please select either 'y' or 'n'" ;;
+        esac
+fi
+
+cd "$DIR"
+
+if [ "$(find -maxdepth 999 -iname "*.csv" | wc -l)" = 0 ]; then
+    echo "$NO_DECKS" && cd "$PWD" && exit
+fi
+
+# Show pretty FZF preview of decks using BAT
+DECK="$(find -maxdepth 999 -iname "*.csv" | fzf --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500')"
+
+main(){
+    IFS=$':'; read -a q <<<$(shuf -n 1 "$DECK")
+    if [ $COUNTER -gt 0 ]; then # If not the first flash card then pause before screen clearing
+        read _
+    fi
+    clear
+    echo "===================================================="
+    echo "Card Reviewed: $COUNTER"
+    echo "Category: ${q[0]}"
+    echo "Question: ${q[1]}"
+    echo ''
+    read -sn 1 NEXT
+    if [ "$NEXT" = q ]; then
+        cd "$PWD"
+        exit
+    fi
+    echo "Answer: ${q[2]}"
+    echo ''
+    echo "===================================================="
+    COUNTER="$(($COUNTER+1))"
+}
+
+while true; do
+        main
+done
