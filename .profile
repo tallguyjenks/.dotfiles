@@ -4,6 +4,7 @@
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 PATH="$PATH:$HOME/.cargo/bin"
+PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
 export LANG="en_US.UTF-8"
 export EDITOR="nvim"
 export TERMINAL="st"
@@ -16,6 +17,9 @@ export REFER="$HOME/Documents/referbib"
 export SUDO_ASKPASS="$HOME/.local/bin/tools/dmenupass"
 export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export XDG_CONFIG_HOME=="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 # less/man colors
 export LESS=-R
