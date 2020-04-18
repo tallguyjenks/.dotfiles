@@ -1,10 +1,10 @@
 # =========================================================================== #
 # PEAMBLE
 # =========================================================================== #
-snippet nc "new command"
+snippet nc "new command" b
 \newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}}$0
 endsnippet
-snippet up "use package"
+snippet up "use package" b
 \usepackage[${1:options}]{${2:package}}$0
 endsnippet
 # =========================================================================== #
@@ -23,22 +23,22 @@ endsnippet
 # TEXT FORMATTING
 # =========================================================================== #
 snippet i "italic"
-\textit{${1}} $0
+\textit{${1:${VISUAL}}} $0
 endsnippet
 snippet e "emphasis"
-\emph{${1}} $0
+\emph{${1:${VISUAL}}} $0
 endsnippet
 snippet b "bold"
-\textbf{${1}} $0
+\textbf{${1:${VISUAL}}} $0
 endsnippet
 snippet u "underline"
-\underline{${1}} $0
+\underline{${1:${VISUAL}}} $0
 endsnippet
 snippet tt "typewriter font"
-\texttt{${1}} $0
+\texttt{${1:${VISUAL}}} $0
 endsnippet
 snippet sc "small caps"
-\textsc{${1}} $0
+\textsc{${1:${VISUAL}}} $0
 endsnippet
 # =========================================================================== #
 # LISTS
@@ -64,27 +64,27 @@ endsnippet
 # =========================================================================== #
 # DOCUMENT STRUCTURE
 # =========================================================================== #
-snippet ch "chapter"
+snippet ch "chapter" b
 \chapter{${1}}
 $0
 endsnippet
-snippet s "section"
+snippet s "section" b
 \section${1}}
 $0
 endsnippet
-snippet ss "sub section"
+snippet ss "sub section" b
 \subsection{${1}}
 $0
 endsnippet
-snippet sss "sub sub section"
+snippet sss "sub sub section" b
 \subsubsection{${1}}
 $0
 endsnippet
-snippet p "paragrap"
+snippet p "paragrap" b
 \paragraph{${1}}
 $0
 endsnippet
-snippet sp "sub paragraph"
+snippet sp "sub paragraph" b
 \subparagraph{${1}}
 $0
 endsnippet
@@ -142,7 +142,13 @@ endsnippet
 # UTILITY
 # =========================================================================== #
 snippet a "hyperlink"
-\href{${1}} $0
+\href{${1:${VISUAL}}} $0
+endsnippet
+snippet { "brace pair"
+{${1}}$0
+endsnippet
+snippet $ "math pair"
+$${1}$$0
 endsnippet
 # =========================================================================== #
 # TABLE
