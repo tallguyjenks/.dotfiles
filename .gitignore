@@ -124,3 +124,4 @@ yay
 .config/vifm/vifminfo
 .local/lib
 .local/share
+.git-credentials
