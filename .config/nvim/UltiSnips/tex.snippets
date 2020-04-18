@@ -1,0 +1,163 @@
+# =========================================================================== #
+# PEAMBLE
+# =========================================================================== #
+snippet nc "new command"
+\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}}$0
+endsnippet
+snippet up "use package"
+\usepackage[${1:options}]{${2:package}}$0
+endsnippet
+# =========================================================================== #
+# ENVIRONMENTS & BLOCKS
+# =========================================================================== #
+snippet beg "\begin{} ... \end{} block"
+\begin{${1:env}}
+	${2}
+\end{$1}
+$0
+endsnippet
+snippet lorum "lorum ipsum text"
+{\blindtext}
+endsnippet
+# =========================================================================== #
+# TEXT FORMATTING
+# =========================================================================== #
+snippet i "italic"
+\textit{${1}} $0
+endsnippet
+snippet e "emphasis"
+\emph{${1}} $0
+endsnippet
+snippet b "bold"
+\textbf{${1}} $0
+endsnippet
+snippet u "underline"
+\underline{${1}} $0
+endsnippet
+snippet tt "typewriter font"
+\texttt{${1}} $0
+endsnippet
+snippet sc "small caps"
+\textsc{${1}} $0
+endsnippet
+# =========================================================================== #
+# LISTS
+# =========================================================================== #
+snippet ol "ordered list"
+\begin{enumerate}
+	\item ${1}
+	${2}
+\end{enumerate}
+$0
+endsnippet
+snippet ul "unordered list"
+\begin{itemize}
+	\item ${1}
+	${2}
+\end{itemize}
+$0
+endsnippet
+snippet li "list item"
+\item ${1}
+${2}
+endsnippet
+# =========================================================================== #
+# DOCUMENT STRUCTURE
+# =========================================================================== #
+snippet ch "chapter"
+\chapter{${1}}
+$0
+endsnippet
+snippet s "section"
+\section${1}}
+$0
+endsnippet
+snippet ss "sub section"
+\subsection{${1}}
+$0
+endsnippet
+snippet sss "sub sub section"
+\subsubsection{${1}}
+$0
+endsnippet
+snippet p "paragrap"
+\paragraph{${1}}
+$0
+endsnippet
+snippet sp "sub paragraph"
+\subparagraph{${1}}
+$0
+endsnippet
+# =========================================================================== #
+# LABELS REFERENCE & FOOTNOTES
+# =========================================================================== #
+snippet lab "label"
+\label{${1}}$0
+endsnippet
+snippet ref "reference a label"
+(\ref{${1}}) $0
+endsnippet
+snippet fn "foot note"
+\footnote{${1} }$0
+endsnippet
+snippet fig "a figure"
+\begin{figure}[h]
+	\centering
+	${1}
+	\caption{${2}}
+	\label{${3}}
+\end{figure}
+$0
+endsnippet
+# =========================================================================== #
+# CITATIONS
+# =========================================================================== #
+snippet ct "cite text"
+\textcite{${1}} $0
+endsnippet
+snippet cp "cite parenthetical"
+\parencite{${1}} $0
+endsnippet
+# =========================================================================== #
+# BEAMER
+# =========================================================================== #
+snippet fr "beamer frame"
+\begin{frame}
+	\frametitle{${1}
+\end{frame}
+$0
+endsnippet
+snippet col "two columns"
+\begin{columns}[T]
+	\begin{column}{.5\textwidth}
+		${1}
+	\end{column}
+	\begin{column}{.5\textwidth}
+		${2}
+	\end{column}
+\end{columns}
+$0
+endsnippet
+# =========================================================================== #
+# UTILITY
+# =========================================================================== #
+snippet a "hyperlink"
+\href{${1}} $0
+endsnippet
+# =========================================================================== #
+# TABLE
+# =========================================================================== #
+snippet tab "table"
+\begin{table}
+	\centering
+	\begin{tabular}{${1}}
+		\hline
+		${2}&${3}&${4}&${5}\\\hline
+		${6}
+	\end{tabular}
+	\caption{${7}}
+	\label{${8}}
+\end{table}
+$0
+endsnippet
+

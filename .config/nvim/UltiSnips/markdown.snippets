@@ -1,0 +1,98 @@
+# =========================================================================== #
+# HEADINGS
+# =========================================================================== #
+snippet 1 "H1"
+# ${1}
+
+$0
+endsnippet
+snippet 2 "H2"
+## ${1}
+
+$0
+endsnippet
+snippet 3 "H3"
+### ${1}
+
+$0
+endsnippet
+snippet 4 "H4"
+#### ${1}
+
+$0
+endsnippet
+snippet 5 "H5"
+##### ${1}
+
+$0
+endsnippet
+snippet 6 "H6"
+###### ${1}
+
+$0
+endsnippet
+# =========================================================================== #
+# LINKS & PICTURES
+# =========================================================================== #
+snippet < "literal link as is"
+<${1}>
+endsnippet
+snippet [ "url link"
+[${1}](${2})$0
+endsnippet
+snippet ![ "Picture"
+![${1}](${2})
+
+$0
+endsnippet
+snippet !![ "hyperlinkedPicture"
+[![${1:Image Alt Text Here}](${2:Image Link here})](${3:hpyerlink here})
+
+$0
+endsnippet
+# =========================================================================== #
+# FONT FORMATTING
+# =========================================================================== #
+snippet b "bold"
+**${1}**
+endsnippet
+snippet i "italic"
+_${1}_
+endsnippet
+snippet s "strikethrough"
+~~${1}~~
+endsnippet
+snippet > "quote"
+> ${1}
+$0
+endsnippet
+snippet - "line"
+---
+
+$0
+endsnippet
+snippet ` "inline code"
+`${1}`
+endsnippet
+snippet ``` "code block"
+```{$1}
+${2}
+```
+
+$0
+endsnippet
+# =========================================================================== #
+# LISTS
+# =========================================================================== #
+snippet ol "ordered list"
+1. ${1}
+$0
+endsnippet
+snippet ul "unordered list"
+- ${1}
+$0
+endsnippet
+snippet t "task"
+- [ ] ${1}
+$0
+endsnippet

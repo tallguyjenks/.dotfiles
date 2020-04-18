@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/plugged')
         "{{{ PRODUCTIVITY }}}
             Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " FZF latest binary
             Plug 'junegunn/fzf.vim' " FZF
+            Plug 'SirVer/ultisnips' " Code Snippets Engine
             Plug 'vifm/vifm.vim' " Allows use of vifm as a file picker
             Plug 'junegunn/goyo.vim' " Focus Mode
             Plug 'junegunn/limelight.vim' " Limelight - Additional Focus mode stuff with Goyo
@@ -26,9 +27,6 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'vimwiki/vimwiki' " Use Vimwiki
             Plug 'lervag/vimtex' " LaTeX Line Compiling?
         "{{{ AESTHETICS }}}
-            Plug 'Xuyuanp/nerdtree-git-plugin' " NerdTree Show Git Status Icons in Nerd Tree
-            Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " This adds syntax highlighting for nerdtree
-            Plug 'ryanoasis/vim-devicons' " NerdTree Icons for filetypes
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
             Plug 'camspiers/lens.vim' " Automatic Window Re-sizing
@@ -37,8 +35,6 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'tpope/vim-commentary' " T-Pope / Comment out code in a variety of langs
             Plug 'Yggdroot/indentLine' " Pretty indented lines
             Plug 'tpope/vim-surround' " T-Pope / Change surrounding tags, characters, quotes
-            Plug 'terryma/vim-multiple-cursors' " Multi-cursor functionality
-            Plug 'scrooloose/nerdtree' " NerdTree File Tree
             Plug 'airblade/vim-gitgutter' " Git code line change icons
             Plug 'vim-pandoc/vim-rmarkdown' " RMarkdown Docs in Vim
             Plug 'vim-pandoc/vim-pandoc' " RMarkdown Docs in Vim
@@ -48,6 +44,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'kovetskiy/sxhkd-vim' " sxhkd Config file syntax highlighting
             Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
         "{{{ ICEBOX }}}
+            "Plug 'terryma/vim-multiple-cursors' " Multi-cursor functionality
             "Plug 'mhinz/vim-startify' " Start screen for vim / Doesnt Work with VimWiki
             "Plug 'neoclide/coc.nvim',{'branch': 'release'} " Code Completion
             "Plug 'morhetz/gruvbox' " Because Gruvbox
@@ -57,12 +54,20 @@ call plug#begin('~/.config/nvim/plugged')
             "Plug 'ap/vim-css-color' " Visual display hexcode colors in vim
     " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 call plug#end()
-
 "=================================="
 "             LEADER               "
 "=================================="
         " ~~~~~ Set Leader Character
                 let mapleader =","
+"=================================="
+"             SNIPPETS             "
+"=================================="
+    " ~~~~~ Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+        let g:UltiSnipsExpandTrigger="<tab>"
+        let g:UltiSnipsJumpForwardTrigger="<tab>"
+        let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+    " ~~~~~ If you want :UltiSnipsEdit to split your window.
+        let g:UltiSnipsEditSplit="vertical"
 "=================================="
 "          Code Folding            "
 "=================================="
@@ -80,6 +85,8 @@ call plug#end()
                 map <C-g> <Esc><Esc>:BCommits!<CR>
         " ~~~~~ Bat Preview Theme
                 let $BAT_THEME = 'Solarized (dark)'
+        " ~~~~~ Let FZF find hidden files and folders
+                let $FZF_DEFAULT_COMMAND='find . -not -path "*/\.git*" -type f -print'
 "=================================="
 "          Miscellaneous           "
 "=================================="
@@ -224,17 +231,11 @@ call plug#end()
                 autocmd! User GoyoEnter Limelight
                 autocmd! User GoyoLeave Limelight!
 "=================================="
-"       Nerd Tree Section          "
+"           File Explorer          "
 "=================================="
-        " ~~~~~ Open Nerdtree
-                map <leader>n :NERDTreeToggle<CR>
-                autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-                let NERDTreeShowHidden=1 " Shows hidden files
-                let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp'] " Do not display some useless files in the tree:
-                set guifont=otf-fira-code " Make it so the Devicons plugin displays correctly in nerdtree
-        " ~~~~~ Always open the tree when booting Vim, but don’t focus it:
-                "autocmd VimEnter * NERDTree
-                "autocmd VimEnter * wincmd p
+        " ~~~~~ Open netrw
+                map <leader>n :Vexplore<CR>
+                let g:netrw_liststyle = 3
 "=================================="
 "       Split Management           "
 "=================================="
@@ -313,14 +314,8 @@ call plug#end()
                 let g:indentLine_setConceal = 1
                 let g:indentLine_conceallevel = 1
                 let g:indentLine_concealcursor = ""
-"============================================================================="
-"                                                                             "
-"                   CODE SNIPPET LAND (HERE BE DRAGONS)                       "
-"                                                                             "
-"============================================================================="
-
 "=================================="
-"              LaTeX               "
+"        LaTeX Code Snips          "
 "=================================="
         " ~~~~~ For Math Mode
                 autocmd FileType tex inoremap $ $$<++><Esc>F$i
@@ -328,88 +323,8 @@ call plug#end()
                 autocmd FileType tex map ,w :w !detex \| wc -w<CR>
         " ~~~~~ Make Braces easier with LaTeX
                 autocmd FileType tex inoremap { {}<++><Esc>F{a
-        " ~~~~~ Multi Cursor Begin Statement
-                autocmd FileType tex inoremap ,beg \begin{DELRN}<CR><++><CR>\end{DELRN}<CR><CR><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<CR>c
-        " ~~~~~ Lorum Impsum Test with the Blindtext package
-                autocmd FileType tex inoremap ,lorum {\blindtext}
-        " ~~~~~ Font Formatting:
-                autocmd FileType tex inoremap ,i \textit{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,e \emph{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,b \textbf{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,u \underline{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,tt \texttt{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
-        " ~~~~~ Lists:
-                autocmd FileType tex inoremap ,ol \begin{enumerate}<CR><CR>\end{enumerate}<CR><CR><++><Esc>3kA\item<Space>
-                autocmd FileType tex inoremap ,ul \begin{itemize}<CR><CR>\end{itemize}<CR><CR><++><Esc>3kA\item<Space>
-                autocmd FileType tex inoremap ,li <CR>\item<Space>
-        " ~~~~~ Chapter and Sections:
-                autocmd FileType tex inoremap ,ch \chapter{}<CR><CR><++><Esc>2kf}i
-                autocmd FileType tex inoremap ,sec \section{}<CR><CR><++><Esc>2kf}i
-                autocmd FileType tex inoremap ,ssec \subsection{}<CR><CR><++><Esc>2kf}i
-                autocmd FileType tex inoremap ,sssec \subsubsection{}<CR><CR><++><Esc>2kf}i
-                autocmd FileType tex inoremap ,p \paragraph{}<CR><CR><++><Esc>2kf}i
-                autocmd FileType tex inoremap ,sp \subparagraph{}<CR><CR><++><Esc>2kf}i
-        " ~~~~~ Labels, References, & Footnotes:
-                autocmd FileType tex inoremap ,lab \label{}<++><Esc>F}i
-                autocmd FileType tex inoremap ,ref \ref{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
-                autocmd FileType tex inoremap ,fn \footnote{}<Space><++><Esc>T{i
-                autocmd FileType tex inoremap ,fig \begin{figure}[h]<CR>\centering<CR><CR>\caption{<++>}<CR>\label{<++>}<CR>\end{figure}<CR><++><Esc>4kA
-        " ~~~~~ Citations
-                autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
-                autocmd FileType tex inoremap ,cp \parencite{}<++><Esc>T{i
-        " ~~~~~ Use Packages
-                autocmd FileType tex inoremap ,up <Esc>/usepackage<CR>o\usepackage{}<++><Esc>F{a
-                autocmd FileType tex nnoremap ,up /usepackage<CR>o\usepackage{}<++><Esc>F{a
-        " ~~~~~ BEAMER presentation snips
-                autocmd FileType tex inoremap ,fr \begin{frame}<CR>\frametitle{}<CR><CR><++><CR><CR>\end{frame}<CR><CR><++><Esc>6kf}i
-                autocmd FileType tex inoremap ,col \begin{columns}[T]<CR>\begin{column}{.5\textwidth}<CR><CR>\end{column}<CR>\begin{column}{.5\textwidth}<CR><++><CR>\end{column}<CR>\end{columns}<Esc>5kA
-        " ~~~~~ Hyperlink
-                autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
-        " ~~~~~ Table
-                autocmd FileType tex inoremap ,tab \begin{table}<CR>\centering<CR>\begin{tabular}{<++>}<CR>\hline<CR><++>&<++>&<++>&<++>\\\hline<CR><++><CR>\end{tabular}<CR>\caption{<++>}<CR>\label{<++>}<CR>\end{table}<CR><CR><++><Esc>11kA
-
-        " ~~~~~ UNSORTED
-                autocmd FileType tex inoremap ,fi \begin{fitch}<CR><CR>\end{fitch}<CR><CR><++><Esc>3kA
-                autocmd FileType tex inoremap ,exe \begin{exe}<CR>\ex<Space><CR>\end{exe}<CR><CR><++><Esc>3kA
-                autocmd FileType tex inoremap ,glos {\gll<Space><++><Space>\\<CR><++><Space>\\<CR>\trans{``<++>''}}<Esc>2k2bcw
-                autocmd FileType tex inoremap ,x \begin{xlist}<CR>\ex<Space><CR>\end{xlist}<Esc>kA<Space>
-                autocmd FileType tex inoremap ,ot \begin{tableau}<CR>\inp{<++>}<Tab>\const{<++>}<Tab><++><CR><++><CR>\end{tableau}<CR><CR><++><Esc>5kA{}<Esc>i
-                autocmd FileType tex inoremap ,can \cand{}<Tab><++><Esc>T{i
-                autocmd FileType tex inoremap ,con \const{}<Tab><++><Esc>T{i
-                autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
-                autocmd FileType tex inoremap ,st <Esc>F{i*<Esc>f}i
-                autocmd FileType tex inoremap ,nu $\varnothing$
 "=================================="
-"               HTML               "
-"=================================="
-        autocmd FileType html inoremap ,b <b></b><Space><++><Esc>FbT>i
-        autocmd FileType html inoremap ,i <em></em><Space><++><Esc>FeT>i
-        autocmd FileType html inoremap ,c <code></code><Space><++><Esc>FeT>i
-        autocmd FileType html inoremap ,1 <h1></h1><CR><CR><++><Esc>2kf<i
-        autocmd FileType html inoremap ,2 <h2></h2><CR><CR><++><Esc>2kf<i
-        autocmd FileType html inoremap ,3 <h3></h3><CR><CR><++><Esc>2kf<i
-        autocmd FileType html inoremap ,p <p></p><CR><br><CR><++><Esc>02kf>a
-        autocmd FileType html inoremap ,a <a<Space>href=""><++></a><Space><++><Esc>14hi
-        autocmd FileType html inoremap ,e <a<Space>target="_blank"<Space>href=""><++></a><Space><++><Esc>14hi
-        autocmd FileType html inoremap ,ul <ul><CR><li></li><CR></ul><CR><CR><++><Esc>03kf<i
-        autocmd FileType html inoremap ,li <Esc>o<li></li><Esc>F>a
-        autocmd FileType html inoremap ,ol <ol><CR><li></li><CR></ol><CR><CR><++><Esc>03kf<i
-        autocmd FileType html inoremap ,im <img src="" alt="<++>"><++><esc>Fcf"a
-        autocmd FileType html inoremap ,td <td></td><++><Esc>Fdcit
-        autocmd FileType html inoremap ,tr <tr></tr><CR><++><Esc>kf<i
-        autocmd FileType html inoremap ,th <th></th><++><Esc>Fhcit
-        autocmd FileType html inoremap ,tab <table><CR></table><Esc>O
-        autocmd FileType html inoremap &<space> &amp;<space>
-"=================================="
-"               BIB                "
-"=================================="
-         autocmd FileType bib inoremap ,a @article{<CR>author<Space>=<Space>{<++>},<CR>year<Space>=<Space>{<++>},<CR>title<Space>=<Space>{<++>},<CR>journal<Space>=<Space>{<++>},<CR>volume<Space>=<Space>{<++>},<CR>pages<Space>=<Space>{<++>},<CR>}<CR><++><Esc>8kA,<Esc>i
-         autocmd FileType bib inoremap ,b @book{<CR>author<Space>=<Space>{<++>},<CR>year<Space>=<Space>{<++>},<CR>title<Space>=<Space>{<++>},<CR>publisher<Space>=<Space>{<++>},<CR>ISBN<Space>=<Space>{<++>}<CR>}<CR><++><Esc>7kA,<Esc>i
-         autocmd FileType bib inoremap ,c @incollection{<CR>author<Space>=<Space>{<++>},<CR>title<Space>=<Space>{<++>},<CR>booktitle<Space>=<Space>{<++>},<CR>editor<Space>=<Space>{<++>},<CR>year<Space>=<Space>{<++>},<CR>publisher<Space>=<Space>{<++>},<CR>}<CR><++><Esc>8kA,<Esc>i
-"=================================="
-"            Markdown              "
+"       Markdown Code Snips        "
 "=================================="
         autocmd Filetype markdown inoremap <leader>s ~~~~<Space><++><Esc>F~hi
         autocmd Filetype markdown,[rR]md map <leader>w yiWi[<Esc>Ea](<Esc>pa)
@@ -432,7 +347,7 @@ call plug#end()
                 "        VIMWIKI Markdown Cmd's    "
                 "=================================="
                         " ~~~~~ Diary Template
-                                autocmd FileType markdown inoremap <leader>diary i#<Space><++><CR><CR><++><CR><CR>##<Space>DevLog<CR><CR><++><CR><CR><Esc>gg
+                                autocmd FileType markdown inoremap <leader>diary #<Space><++><CR><CR><++><CR><CR>##<Space>DevLog<CR><CR><++><CR><CR><Esc>gg
                         " ~~~~~ This is for a vim wiki note template
                                 autocmd Filetype markdown inoremap <leader>note #<Space>Explain<CR><CR><CR><CR>#<Space>Documentation<CR><CR><++><CR><CR>#<Space>Code<CR><CR>```<++><CR><CR>#<Space> Documentation<CR><++><CR><CR>```<CR><CR><Esc>gg2ji
                                 autocmd Filetype markdown inoremap <leader>shnote #<Space>Explain<CR><CR><CR><CR>```sh<CR><CR><++><CR><CR>```<CR><CR>#<Space>Documentation<CR><CR><++><CR><CR><Esc>gg2ji
@@ -445,10 +360,3 @@ call plug#end()
                 "=================================="
                         " ~~~~~ Open terminal in split for R analysis
                                 autocmd FileType *.R,*.Rmd, nnoremap <leader>t :vsp<CR>:terminal<CR>aR<CR>
-"=================================="
-"               XML                "
-"=================================="
-        autocmd FileType xml inoremap ,e <item><CR><title><++></title><CR><guid<space>isPermaLink="false"><++></guid><CR><pubDate><Esc>:put<Space>=strftime('%a, %d %b %Y %H:%M:%S %z')<CR>kJA</pubDate><CR><link><++></link><CR><description><![CDATA[<++>]]></description><CR></item><Esc>?<title><CR>cit
-        autocmd FileType xml inoremap ,a <a href="<++>"><++></a><++><Esc>F"ci"
-
-
