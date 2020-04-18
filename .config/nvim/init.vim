@@ -129,6 +129,7 @@ call plug#end()
                     highlight! link DiffText MatchParen
                 endif
         " ~~~~~ Additional Options
+                set backspace=indent,eol,start " Allow backspacing over these items
                 set conceallevel=0 " Dont hide my shit
                 set background=light " Use colors that suit a dark background
                 set nobackup " Do not mak backup files and clog up the works
@@ -253,7 +254,9 @@ call plug#end()
                 nnoremap c<C-j> :bel sp new<CR>
                 nnoremap c<C-k> :abo sp new<CR>
                 nnoremap c<C-l> :rightb vsp new<CR>
+        " ~~~~~ Closing splits in a sane way
                 nnoremap <C-q> :q<CR>
+                nnoremap <S-Q> :only<CR>
         " ~~~~~ Open my bibliography file in split
                 map <leader>B :vsp<space>$BIB<CR>
 "=================================="
