@@ -24,7 +24,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'junegunn/goyo.vim' " Focus Mode
             Plug 'junegunn/limelight.vim' " Limelight - Additional Focus mode stuff with Goyo
             Plug 'vim-scripts/restore_view.vim' " Remember code folds and cursor position
-            Plug 'vimwiki/vimwiki' " Use Vimwiki
+            Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Use Vimwiki
             Plug 'lervag/vimtex' " LaTeX Line Compiling?
         "{{{ AESTHETICS }}}
             Plug 'bling/vim-airline' " Airline Status bar Vim
@@ -206,6 +206,8 @@ call plug#end()
                 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
                 autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
                 autocmd BufRead,BufNewFile *.tex set filetype=tex
+
+                autocmd Filetype Rmd inoremap <tab> <Esc>:UltiSnipsExpandTrigger<CR>
 "=================================="
 "           LimeLight              "
 "=================================="
@@ -272,7 +274,10 @@ call plug#end()
 "             VIM WIKI             "
 "=================================="
     " ~~~~~ Ensure files are read as what I want in vimwiki:
-        let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+        let g:vimwiki_global_ext = 0
+        let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+        let g:vimwiki_root = '~/VimWiki'
+        let g:vimwiki_listsyms = '✗○◐●✓'
         let g:vimwiki_list = [
             \{'path': '~/VimWiki', 'syntax': 'markdown', 'ext': '.md'},
             \{'path': '~/VimWiki/academia', 'syntax': 'markdown', 'ext':'.md'},
@@ -317,28 +322,25 @@ call plug#end()
 "=================================="
 "        LaTeX Code Snips          "
 "=================================="
-        " ~~~~~ For Math Mode
-                autocmd FileType tex inoremap $ $$<++><Esc>F$i
         " ~~~~~ Word count:
                 autocmd FileType tex map ,w :w !detex \| wc -w<CR>
-        " ~~~~~ Make Braces easier with LaTeX
-                autocmd FileType tex inoremap { {}<++><Esc>F{a
 "=================================="
 "       Markdown Code Snips        "
 "=================================="
-        autocmd Filetype markdown inoremap <leader>s ~~~~<Space><++><Esc>F~hi
-        autocmd Filetype markdown,[rR]md map <leader>w yiWi[<Esc>Ea](<Esc>pa)
-        autocmd Filetype markdown,[rR]md inoremap <leader>n ---<CR><CR>
-        autocmd Filetype markdown,[rR]md inoremap <leader>b ****<Space><++><Esc>F*hi
-        autocmd Filetype markdown,[rR]md inoremap <leader>i __<Space><++><Esc>F_i
-        autocmd Filetype markdown,[rR]md inoremap <leader>fn ^[]<Space><++><Esc>F[a
-        autocmd Filetype markdown,[rR]md inoremap <leader>l [](<++>)<++><Esc>F[a
-        autocmd Filetype markdown,[rR]md inoremap <leader>1 #<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype markdown,[rR]md inoremap <leader>2 ##<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype markdown,[rR]md inoremap <leader>3 ###<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype markdown,[rR]md inoremap <leader>4 ####<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype markdown,[rR]md inoremap <leader>5 #####<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype markdown,[rR]md inoremap <leader>6 ######<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown inoremap <leader>s ~~~~<Space><++><Esc>F~hi
+        autocmd Filetype [rR]md,markdown inoremap $ $$<Space><++><Esc>F$i
+        autocmd Filetype [rR]md,markdown map <leader>w yiWi[<Esc>Ea](<Esc>pa)
+        autocmd Filetype [rR]md,markdown inoremap <leader>n ---<CR><CR>
+        autocmd Filetype [rR]md,markdown inoremap <leader>b ****<Space><++><Esc>F*hi
+        autocmd Filetype [rR]md,markdown inoremap <leader>i __<Space><++><Esc>F_i
+        autocmd Filetype [rR]md,markdown inoremap <leader>fn ^[]<Space><++><Esc>F[a
+        autocmd Filetype [rR]md,markdown inoremap <leader>l [](<++>)<++><Esc>F[a
+        autocmd Filetype [rR]md,markdown inoremap <leader>1 #<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown inoremap <leader>2 ##<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown inoremap <leader>3 ###<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown inoremap <leader>4 ####<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown inoremap <leader>5 #####<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown inoremap <leader>6 ######<Space><CR><CR><++><Esc>2kA
         autocmd Filetype [rR]md inoremap <leader>r ```{r}<CR>```<CR><CR><++><Esc>2kO
         autocmd Filetype [rR]md inoremap <leader>p `r knitr::include_graphics("")`<Space><++><Esc>F"i
         autocmd Filetype [rR]md inoremap <leader>sub ~~<Space><++><Esc>F~i
