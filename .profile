@@ -17,9 +17,9 @@ export REFER="$HOME/Documents/referbib"
 export SUDO_ASKPASS="$HOME/.local/bin/tools/dmenupass"
 export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
-export XDG_CONFIG_HOME=="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
+#export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+#export XDG_CONFIG_HOME=="$HOME/.config"
+#export XDG_DATA_HOME="$HOME/.local/share"
 
 # less/man colors
 export LESS=-R
