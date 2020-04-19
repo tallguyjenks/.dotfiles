@@ -33,8 +33,12 @@ if [ ${1} ]; then
 fi
 $0
 endsnippet
-snippet elif
-elif [[ ${1:condition} ]]; then
+snippet elif "else if"
+elif [ ${1:condition} ]; then
+	$0
+endsnippet
+snippet else "else"
+else
 	$0
 endsnippet
 snippet for
