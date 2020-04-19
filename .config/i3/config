@@ -68,7 +68,7 @@ bindsym $mod+Shift+o		exec --no-startup-id i3resize right
 
 bindsym $mod+a			exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
 
-bindsym $mod+s			slack & disown
+bindsym $mod+s			exec slack & disown
 
 # bindsym $mod+s			gaps inner current plus 5
 # bindsym $mod+Shift+s		gaps inner current minus 5
