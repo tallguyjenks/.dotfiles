@@ -118,6 +118,7 @@ yay
 .config/nvim/plugged
 .config/nvim/sessions
 .config/nvim/spell
+.config/obs-studio
 .config/taskell/TODO.md
 .config/vifm/scripts
 .config/vifm/vifm-help.txt
