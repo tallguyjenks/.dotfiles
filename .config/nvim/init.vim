@@ -20,7 +20,6 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " FZF latest binary
             Plug 'junegunn/fzf.vim' " FZF
             Plug 'SirVer/ultisnips' " Code Snippets Engine
-            Plug 'vifm/vifm.vim' " Allows use of vifm as a file picker
             Plug 'junegunn/goyo.vim' " Focus Mode
             Plug 'junegunn/limelight.vim' " Limelight - Additional Focus mode stuff with Goyo
             Plug 'vim-scripts/restore_view.vim' " Remember code folds and cursor position
@@ -47,7 +46,7 @@ call plug#begin('~/.config/nvim/plugged')
             "Plug 'terryma/vim-multiple-cursors' " Multi-cursor functionality
             "Plug 'mhinz/vim-startify' " Start screen for vim / Doesnt Work with VimWiki
             "Plug 'neoclide/coc.nvim',{'branch': 'release'} " Code Completion
-            "Plug 'morhetz/gruvbox' " Because Gruvbox
+            Plug 'morhetz/gruvbox' " Because Gruvbox
             "Plug 'nathanaelkane/vim-indent-guides' " Indentation guides
             "Plug 'rust-lang/rust.vim' " Full Rust language support
             "Plug 'KKPMW/vim-sendtowindow' " Sending code to terminal in vim (uses <space>hjkl)
@@ -129,9 +128,19 @@ call plug#end()
                     highlight! link DiffText MatchParen
                 endif
         " ~~~~~ Additional Options
+            "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            "                       GRUVBOX THINGS
+            "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                "let g:airline_theme='gruvbox'
+                "let g:gruvbox_contrast_dark='hard'
+                "let g:gruvbox_italicize_strings=1
+                "colorscheme gruvbox
+                "set background=dark " Use colors that suit a dark background
+            "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                set background=light " Use colors that suit a dark background
+                set wildmenu " Tab through menu lists
                 set backspace=indent,eol,start " Allow backspacing over these items
                 set conceallevel=0 " Dont hide my shit
-                set background=light " Use colors that suit a dark background
                 set nobackup " Do not mak backup files and clog up the works
                 set noswapfile " Dont use swap files, they're annoying
                 set go=a " Hide GuiOptions
@@ -151,6 +160,7 @@ call plug#end()
                 set autoindent " New lines inherit indentation of preceding lines
                 set scrolloff=10 " keep at least 5 lines above/below
                 set ignorecase " search ignoring case
+                set cursorline " show me what line im on
                 "filetype indent on " Enable filetype-specific indenting
                 filetype plugin on " File type detection
                 syntax on " Turn on syntax highlighting
