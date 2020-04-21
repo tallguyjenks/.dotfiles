@@ -160,7 +160,7 @@ call plug#end()
                 set autoindent " New lines inherit indentation of preceding lines
                 set scrolloff=10 " keep at least 5 lines above/below
                 set ignorecase " search ignoring case
-                set cursorline " show me what line im on
+                "set cursorline " show me what line im on
                 "filetype indent on " Enable filetype-specific indenting
                 filetype plugin on " File type detection
                 syntax on " Turn on syntax highlighting
