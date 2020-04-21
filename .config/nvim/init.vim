@@ -25,6 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'vim-scripts/restore_view.vim' " Remember code folds and cursor position
             Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Use Vimwiki
             Plug 'lervag/vimtex' " LaTeX Line Compiling?
+            Plug 'vim-scripts/AutoComplPop' " Sensible Autocompletion
         "{{{ AESTHETICS }}}
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
@@ -58,6 +59,14 @@ call plug#end()
 "=================================="
         " ~~~~~ Set Leader Character
                 let mapleader =","
+"=================================="
+"           AUTOCOMPLPOP           "
+"=================================="
+        " ~~~~~ Select the complete menu item like CTRL+y would.
+            inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
+
+        " ~~~~~ Cancel the complete menu item like CTRL+e would.
+            inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
 "=================================="
 "             SNIPPETS             "
 "=================================="
@@ -137,6 +146,9 @@ call plug#end()
                 "colorscheme gruvbox
                 "set background=dark " Use colors that suit a dark background
             "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                set wildcharm=<Tab> " for tab autocompletion with the AutoComplPop plugin
+                set shortmess+=c " no status bar spam for the AutoComplPop plugin
+                set completeopt=menuone,longest " Completion Options for the AutoComplPop plug
                 set background=light " Use colors that suit a dark background
                 set wildmenu " Tab through menu lists
                 set backspace=indent,eol,start " Allow backspacing over these items
