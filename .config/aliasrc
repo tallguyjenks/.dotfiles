@@ -10,11 +10,11 @@ alias ka="killall" \
 	g="git" \
 	trem="transmission-remote" \
 	e="$EDITOR" \
-	v="$EDITOR" \
+	v="$EDITOR -p" \
 	x="sxiv -ft *" \
 	sdn="sudo shutdown -h now" \
 	gua="git remote | xargs -L1 git push --all" \
-	ls="ls -hNA --color=auto --group-directories-first" \
+	#ls="ls -hNA --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff -y -i -w -B --color" \
 	ccat="highlight --out-format=ansi" \
@@ -33,10 +33,6 @@ function taskProject(){
 	task $1 modify project:$2
 }
 
-function taskTag(){
-	task $1 modify +$2
-}
-
 alias ls=lsd
 alias ll="ls -l -A"
 alias ta="task add $1"
@@ -44,10 +40,10 @@ alias report="task burndown.daily"
 alias t="task list"
 alias h="cd $HOME && taskell"
 alias tpro=taskproject
-alias tt=taskTag
+alias tt="task $1 modify +$2"
 alias scim=sc-im
 alias jn="jupyter notebook"
-alias bib="vim $HOME/Documents/bib/uni.bib"
+alias bib="nvim $HOME/Documents/bib/uni.bib"
 alias roth="roth | grep The"
 alias py=bpython
 alias python=bpython
