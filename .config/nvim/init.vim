@@ -98,6 +98,10 @@ call plug#end()
 "=================================="
 "          Miscellaneous           "
 "=================================="
+        " ~~~~~ gitgutter Colorizing
+                highlight GitGutterAdd ctermfg=Green
+                highlight GitGutterChange ctermfg=Yellow
+                highlight GitGutterDelete ctermfg=Red
         " ~~~~~ Open files with intended programs not vim
                 augroup nonvim
                    au!
@@ -173,7 +177,6 @@ call plug#end()
                 set scrolloff=10 " keep at least 5 lines above/below
                 set ignorecase " search ignoring case
                 "set cursorline " show me what line im on
-                "filetype indent on " Enable filetype-specific indenting
                 filetype plugin on " File type detection
                 syntax on " Turn on syntax highlighting
         " ~~~~~ This maps CTRL-C to T-popes commentary for commenting out code
