@@ -233,7 +233,7 @@ call plug#end()
                 autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
                 autocmd BufRead,BufNewFile *.tex set filetype=tex
 
-                autocmd Filetype Rmd inoremap <tab> <Esc>:UltiSnipsExpandTrigger<CR>
+                "autocmd Filetype Rmd inoremap <tab> <Esc>:UltiSnipsExpandTrigger<CR>
 "=================================="
 "           LimeLight              "
 "=================================="
