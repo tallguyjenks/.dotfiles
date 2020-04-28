@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+SUBS="$(curl -s https://socialblade.com/youtube/channel/UCfhSB16X9MXhzSFe_H7XbHg | grep "live subscriber" | awk -F\> '{print $2}' | awk -F\< '{print $1}')"
+
+printf -v MSG ":%s" "$SUBS"
+
+echo "$MSG"

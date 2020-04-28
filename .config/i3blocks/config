@@ -6,6 +6,10 @@ markup=pango
 command=runes "hail the old gods"
 interval=once
 
+[YoutubeSubs]
+command=youtubesubs
+interval=30
+
 [record]
 command=cat /tmp/recordingicon
 interval=once
