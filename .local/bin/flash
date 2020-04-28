@@ -44,14 +44,19 @@
 
 # Remember User's Starting Directory
     PWD="$(pwd)"
-# Where Decks Are Located
-    DIR="$HOME/.local/share/flash"
-# Where the example deck with be placed and named
-    EXAMPLE_DECK="$HOME/.local/share/flash/deck.csv"
+# Where Decks Are Located for linux & mac
+    OS="$(uname)"
+    case "$OS" in
+        "Darwin") DIR="$HOME/Library/Application Support/flash" ;;
+        "Linux") DIR="$HOME/.local/share/flash" ;;
+        *) DIR="$HOME/.local/share/flash" ;;
+    esac
+# Where the example deck will be placed and named
+    EXAMPLE_DECK="$DIR/deck.csv"
 # Track High score
-    HIGH_SCORE="$HOME/.local/share/flash/.highscore"
+    HIGH_SCORE="$DIR/.highscore"
 # Track number of cards reviewed per session
-    REVIEW_LOG="$HOME/.local/share/flash/.reviews"
+    REVIEW_LOG="$DIR/.reviews"
 # Iterator for Count of cards reveiwed
     COUNTER=0
 # Success message of setup process
@@ -100,12 +105,12 @@ Science:What is the distance between the Earth and Sol called?:An Astronomical U
 Programming:Best operating system?:Arch, because BTW i run Arch:999"
 
 # Test if .local/share exists and wether to offer setup process
-if [ ! -d $DIR ];then
-    echo -e "No ${LRED}.local/share/flash${NC} directory, make it? ${LGREEN}y${NC}/${LRED}n${NC}"
+if [ ! -d "$DIR" ];then
+    echo -e "No ${LRED}$DIR/flash${NC} directory, make it? ${LGREEN}Y${NC}/${LRED}N${NC}"
     read RESPONSE
         case "$RESPONSE" in
             [QqNn]) exit ;;
-            [Yy]) mkdir "$DIR" && touch {$EXAMPLE_DECK,$HIGH_SCORE,$REVIEW_LOG} && echo "$DECK_TEMPLATE" >> $EXAMPLE_DECK && echo -e "$DIR_MADE_MSG" && exit;;
+            [Yy]) mkdir "$DIR" && touch {"$EXAMPLE_DECK","$HIGH_SCORE","$REVIEW_LOG"} && echo "$DECK_TEMPLATE" >> "$EXAMPLE_DECK" && echo -e "$DIR_MADE_MSG" && exit;;
             *) echo -e "invalid choice, please select either ${LGREEN}y${NC} or ${LRED}n${NC}" && exit ;;
         esac
 fi
@@ -114,7 +119,7 @@ fi
     cd "$DIR"
 
 # If there are no flashcard decks available return user to starting location
-if [ "$(find -maxdepth 999 -iname "*.csv" | wc -l)" = 0 ]; then
+if [ $(find -maxdepth "$SEARCH_DEPTH" -iname "*.csv" | wc -l) = 0 ]; then
     echo -e "$NO_DECKS" && cd "$PWD" && exit
 fi
 
@@ -132,7 +137,7 @@ fi
     DECK="$(find -maxdepth $SEARCH_DEPTH -iname '*.csv' | fzf --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500')"
 
 # If no deck is selected in fzf menu, return user to start location and exit
-if [ -z $DECK ]; then
+if [ -z "$DECK" ]; then
     cd "$PWD" && exit
 fi
 
@@ -168,7 +173,7 @@ main(){
     fi
     clear
 
-    COUNTER="$(($COUNTER+1))" # Increment count for above test and card review count increment
+    COUNTER="$(($COUNTER+1))" # Increment count for card review count increment
 
     if [ "${q[3]}" = 0 ]; then
         NEW_ITEM_SCORE=0
@@ -201,7 +206,7 @@ main(){
 
     # Update item score for each flashcard item
     sed -i "s/${q[0]}:${q[1]}:${q[2]}:${q[3]}/${q[0]}:${q[1]}:${q[2]}:$NEW_ITEM_SCORE/g" "$DECK"
-    # Update highscore if new highscore is achieved
+    # If no highscore currently set, set it.
     if [ -z "$(cat $HIGH_SCORE)" ]; then
         echo "$COUNTER" > "$HIGH_SCORE"
     fi
