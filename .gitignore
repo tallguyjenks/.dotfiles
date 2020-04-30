@@ -48,6 +48,7 @@
 .Xauthority
 .yarn
 .yarnrc
+.zoom
 Documents
 Downloads
 ex.sh
@@ -104,6 +105,7 @@ user-dirs.dirs
 VSCodium
 wall.png
 yay
+Youtube
 .config/calcurse/apts
 .config/calcurse/keys
 .config/calcurse/notes
@@ -121,6 +123,8 @@ yay
 .config/vifm/scripts
 .config/vifm/vifm-help.txt
 .config/vifm/vifminfo
+.config/zoomus.conf
+.config/Unknown Organization/
 .local/lib
 .local/share
 .git-credentials
