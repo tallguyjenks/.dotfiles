@@ -22,6 +22,7 @@
 .node-gyp
 .npm
 .openjfx
+.openshot_qt
 .password-store
 .pki
 .pylint.d
