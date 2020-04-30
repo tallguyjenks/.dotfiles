@@ -21,7 +21,6 @@ interval=once
 signal=11
 
 [news]
-label=📰
 interval=once
 signal=6
 
@@ -33,9 +32,9 @@ label=📦
 interval=once
 signal=8
 
-[torrent]
-interval=20
-signal=7
+#[torrent]
+#interval=20
+#signal=7
 
 [weather]
 interval=18000
