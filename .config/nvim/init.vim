@@ -390,3 +390,9 @@ call plug#end()
                 "=================================="
                         " ~~~~~ Open terminal in split for R analysis
                                 autocmd FileType *.R,*.Rmd, nnoremap <leader>t :vsp<CR>:terminal<CR>aR<CR>
+
+"=================================="
+"           HTML SNIPPETS          "
+"=================================="
+    " ~~~~~ For cleaning lb blog entries
+        autocmd FileType html nnoremap <leader>clean <Esc>Gd3kgg
