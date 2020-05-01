@@ -111,9 +111,9 @@ call plug#end()
 "          Miscellaneous           "
 "=================================="
         " ~~~~~ gitgutter Colorizing
-                highlight GitGutterAdd ctermfg=Green
-                highlight GitGutterChange ctermfg=Yellow
-                highlight GitGutterDelete ctermfg=Red
+                "highlight GitGutterAdd ctermfg=Green
+                "highlight GitGutterChange ctermfg=Yellow
+                "highlight GitGutterDelete ctermfg=Red
         " ~~~~~ Open files with intended programs not vim
                 augroup nonvim
                    au!
@@ -159,13 +159,17 @@ call plug#end()
                 "let g:airline_theme='gruvbox'
                 "let g:gruvbox_contrast_dark='hard'
                 "let g:gruvbox_italicize_strings=1
+                "let g:gruvbox_italic=1
+                "let g:gruvbox_invert_indent_guides=1
+                "let g:gruvbox_improved_strings=1
+                "let g:gruvbox_improved_warnings=1
                 "colorscheme gruvbox
                 "set background=dark " Use colors that suit a dark background
             "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                set background=light " Use colors that suit a dark background
                 set wildcharm=<Tab> " for tab autocompletion with the AutoComplPop plugin
                 set shortmess+=c " no status bar spam for the AutoComplPop plugin
                 set completeopt=menuone,longest " Completion Options for the AutoComplPop plug
-                set background=light " Use colors that suit a dark background
                 set wildmenu " Tab through menu lists
                 set backspace=indent,eol,start " Allow backspacing over these items
                 set conceallevel=0 " Dont hide my shit
@@ -404,7 +408,6 @@ call plug#end()
                 "=================================="
                         " ~~~~~ Open terminal in split for R analysis
                                 autocmd FileType *.R,*.Rmd, nnoremap <leader>t :vsp<CR>:terminal<CR>aR<CR>
-
 "=================================="
 "           HTML SNIPPETS          "
 "=================================="
