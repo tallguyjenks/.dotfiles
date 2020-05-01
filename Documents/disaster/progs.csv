@@ -45,4 +45,5 @@ A,gita,python script for managing mass amounts of git repos
 A,bat,rust version of cat. it'a cat++
 A,screenkey,screencasting tool
 ,obs-studio,screencasting screen share tool
+A,ghi-git,github issues in the cli
 ,,
