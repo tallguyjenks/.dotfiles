@@ -27,6 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'lervag/vimtex' " LaTeX Line Compiling?
             Plug 'vim-scripts/AutoComplPop' " Sensible Autocompletion
         "{{{ AESTHETICS }}}
+            Plug 'junegunn/vim-emoji' " Emojis in vim
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
             Plug 'camspiers/lens.vim' " Automatic Window Re-sizing
@@ -60,6 +61,14 @@ call plug#end()
         " ~~~~~ Set Leader Character
                 let mapleader =","
 "=================================="
+"             EMOJI                "
+"=================================="
+    " ~~~~~ Gitgutter emoji stuff
+        let g:gitgutter_sign_added = emoji#for('white_check_mark')
+        let g:gitgutter_sign_modified = emoji#for('large_orange_diamond')
+        let g:gitgutter_sign_removed = emoji#for('x')
+        let g:gitgutter_sign_modified_removed = emoji#for('collision')
+"=================================="
 "           AUTOCOMPLPOP           "
 "=================================="
         " ~~~~~ Select the complete menu item like CTRL+y would.
@@ -67,6 +76,9 @@ call plug#end()
 
         " ~~~~~ Cancel the complete menu item like CTRL+e would.
             inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
+
+        " ~~~~~ Emoji autocompletion
+            set completefunc=emoji#complete
 "=================================="
 "             SNIPPETS             "
 "=================================="
@@ -297,7 +309,7 @@ call plug#end()
                 autocmd VimLeave *.tex !texclear %
         " ~~~~~ Maps the typical auto compiler key to \o which calles the
         " ~~~~~ Vim Live Latex preview function for live preview
-                autocmd FileType tex map <leader>a \o
+                autocmd FileType tex map <leader>a :VimtexCompile<CR>
 "=================================="
 "             VIM WIKI             "
 "=================================="
@@ -352,6 +364,8 @@ call plug#end()
 "=================================="
         " ~~~~~ Word count:
                 autocmd FileType tex map ,w :w !detex \| wc -w<CR>
+        " ~~~~~ Make the autocompiler from vimtex open in zathura
+                let g:vimtex_view_method = 'zathura'
 "=================================="
 "       Markdown Code Snips        "
 "=================================="
