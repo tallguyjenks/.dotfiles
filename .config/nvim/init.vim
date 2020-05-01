@@ -342,7 +342,7 @@ call plug#end()
                 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=237
                 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=238
         " ~~~~~ From Yggdroot/indentLine
-                let g:indentLine_color_term = 6 " Makes the vertical bars Red from term color 1
+                let g:indentLine_color_term = 6 " Makes the vertical bars Green from term color 1
                 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
                 let g:indentLine_setConceal = 1
                 let g:indentLine_conceallevel = 1
