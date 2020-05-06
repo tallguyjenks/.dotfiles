@@ -35,6 +35,7 @@ function taskProject(){
 
 alias ls=lsd
 alias ll="ls -l -A"
+alias cat="bat"
 alias ta="task add $1"
 alias report="task burndown.daily"
 alias t="task list"
