@@ -168,6 +168,7 @@ call plug#end()
             "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
                 set background=light " Use colors that suit a dark background
                 set wildcharm=<Tab> " for tab autocompletion with the AutoComplPop plugin
+                set lazyredraw " dont redraw screen during macro execution
                 set shortmess+=c " no status bar spam for the AutoComplPop plugin
                 set completeopt=menuone,longest " Completion Options for the AutoComplPop plug
                 set wildmenu " Tab through menu lists
