@@ -3,6 +3,9 @@
 SUBS="$(curl -s https://www.youtube.com/channel/UCfhSB16X9MXhzSFe_H7XbHg | grep -i "subscribers" | awk -F\> '{print $19}' | awk -F\< '{print $1}'
 )"
 
-printf -v MSG ":%s" "$SUBS"
+BIZSUBS="$(curl -s https://www.youtube.com/channel/UCT5iV67PHRN6oWLAuifQu5g | grep -i "subscribers" | awk -F\> '{print $19}' | awk -F\< '{print $1}'
+)"
+
+printf -v MSG ":%s 🐄:%s" "$SUBS" "$BIZSUBS"
 
 echo "$MSG"

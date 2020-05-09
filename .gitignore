@@ -128,3 +128,4 @@ Youtube
 .local/lib
 .local/share
 .git-credentials
+.Rproj.user

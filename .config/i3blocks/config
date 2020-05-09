@@ -3,7 +3,7 @@ separator_block_width=15
 markup=pango
 
 [rune]
-command=runes "hail the old gods"
+command=runes "o"
 interval=once
 
 [YoutubeSubs]
@@ -80,8 +80,8 @@ interval=10
 label=📅
 interval=30
 
-[networktraffic]
-interval=1
+#[networktraffic]
+#interval=1
 
 [internet]
 interval=10

@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 
-pkill --full /dev/video || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=-0-0 --autofit=30%  --title="mpvfloat" /dev/video2
+# Built In Webcam Usually
+pkill --full /dev/video || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=-0-0 --autofit=30%  --title="mpvfloat" /dev/video0
+
+# External Webcam Usually
+#pkill --full /dev/video || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=-0-0 --autofit=30%  --title="mpvfloat" /dev/video2
 
