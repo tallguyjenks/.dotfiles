@@ -1,16 +1,29 @@
 #!/usr/bin/env sh
 # Profile file. Runs on login.
 
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export GOPATH="$XDG_DATA_HOME/go"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export GEM_HOME="$XDG_DATA_HOME/gem"
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+export HISTFILE="$XDG_DATA_HOME/bash/history"
+
 # Adds `~/.local/bin/` and all subdirectories to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-PATH="$PATH:$HOME/.cargo/bin"
+PATH="$PATH:$XDG_DATA_HOME/cargo/bin"
 PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+
 export LANG="en_US.UTF-8"
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
-export FILE="vifm"
+export FILE="ranger"
+
 export RESEARCH="$HOME/Research"
 export BIB="$HOME/Research/bib/mega.bib"
 export REFER="$HOME/Documents/referbib"
