@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-# This script will compile automatically upon save when called
-
-pkill -f "entr compiler" && exit
-echo $1 | entr compiler "$1"
-

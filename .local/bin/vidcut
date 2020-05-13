@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-INPUTFILE=$1
-((STARTTIME = ($2 * 60) + $3 ))
-((ENDTIME = ($4 * 60) + $5 ))
-OUTPUTFILE=$6
-
-ffmpeg -i $INPUTFILE -ss $STARTTIME -t $ENDTIME -c copy $OUTPUTFILE
