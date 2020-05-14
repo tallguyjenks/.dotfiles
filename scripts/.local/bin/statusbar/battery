@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+# Give a battery name (e.g. BAT0) as an argument.
+
+case $BLOCK_BUTTON in
+    3) pgrep -x dunst >/dev/null && notify-send " Battery module" " : discharging
+: not charging
+: stagnant charge
+: charging
+: charged
+: battery very low!
+- Text color reflects charge left" ;;
+esac
+
+capacity=$(cat /sys/class/power_supply/"$1"/capacity) || exit
+status=$(cat /sys/class/power_supply/"$1"/status)
+
+if [ "$capacity" -ge 85 ]; then
+	color="#689d6a"
+elif [ "$capacity" -ge 65 ]; then
+	color="#fabd2f"
+elif [ "$capacity" -ge 50 ]; then
+	color="#d79921"
+elif [ "$capacity" -ge 25 ]; then
+	color="#d65d0e"
+elif [ "$capacity" -ge 5 ]; then
+	color="#cc241d"
+else
+	color="#fb4934"
+	warn=" "
+fi
+
+[ -z $warn ] && warn=""
+
+[ "$status" = "Charging" ] && [ ! -z "$warn" ] && status="Charging" && warn=""
+[ "$status" = "Discharging" ] && [ ! -z "$warn" ] && status=""
+[ "$capacity" = 0 ] && [ "$status" = "Unknown" ] && [ ! -z "$warn" ] && status=" " && warn=""
+
+printf "<span color='%s'>%s%s%s</span>\n" "$color" "$(echo "$status" | sed -e \
+    "s/,//;s/Discharging/ / \
+    ;s/Not Charging/ / \
+    ;s/Charging/ / \
+    ;s/Unknown/ / \
+    ;s/Full/ / \
+    ;s/ 0*/ /g \
+    ;s/ :/ /g")" "$warn" "$(echo "$capacity" | sed -e 's/$/%/')"

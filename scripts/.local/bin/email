@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Notification
+notify-send "your email" "now opening up your email applications"
+
+# Open my email
+protonmail-bridge & disown
+
+neomutt
+

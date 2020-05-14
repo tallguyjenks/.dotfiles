@@ -1,0 +1,86 @@
+snippet r
+	```{r ${1:label}}
+	${0:code}
+	```
+snippet t1
+	|${1:col}|
+	|:-:|
+	|${2:Data}|
+	|${0}|
+
+snippet t2
+	|${1:col}|${2:col}|
+	|:-:|:-:|
+	|${3:Data}|${4:Data}|
+	|${0}||
+
+snippet t3
+	|${1:col}|${2:col}|${3:col}|
+	|:-:|:-:|:-:|
+	|${4:Data}|${5:Data}|${6:Data}|
+	|${0}|||
+
+snippet t4
+	|${1:col}|${2:col}|${3:col}|${4:col}|
+	|:-:|:-:|:-:|:-:|
+	|${5:Data}|${6:Data}|${7:Data}|${8:Data}|
+	|${0}||||
+
+snippet t5
+	|${1:col}|${2:col}|${3:col}|${4:col}|${5:col}|
+	|:-:|:-:|:-:|:-:|:-:|
+	|${6:Data}|${7:Data}|${8:Data}|${9:Data}|${10:Data}|
+	|${0}|||||
+
+snippet t6
+	|${1:col}|${2:col}|${3:col}|${4:col}|${5:col}|${6:col}|
+	|:-:|:-:|:-:|:-:|:-:|:-:|
+	|${7:Data}|${8:Data}|${9:Data}|${10:Data}|${11:Data}|${12:Data}|
+	|${0}||||||
+
+snippet t7
+	|${1:col}|${2:col}|${3:col}|${4:col}|${5:col}|${6:col}|${7:col}|
+	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+	|${8:Data}|${9:Data}|${10:Data}|${11:Data}|${12:Data$}|{13:Data}|${14:Data}|
+	|${0}|||||||
+
+snippet t8
+	|${1:col}|${2:col}|${3:col}|${4:col}|${5:col}|${6:col}|${7:col}|${8:col}|
+	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+	|${9:Data}|${10:Data}|${11:Data}|${12:Data$}|${13:Data}|${14:Data}|${15:Data}|${16:Data}|
+	|${0}||||||||
+
+snippet t9
+	|${1:col}|${2:col}|${3:col}|${4:col}|${5:col}|${6:col}|${7:col}|${8:col}|${9:col}|
+	|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+	|${10:Data}|${11:Data}|${12:Data$}|${13:Data}|${14:Data}|${15:Data}|${16:Data}|${17:Data}|${18:Data}|
+	|${0}|||||||||
+
+snippet pic
+	```{r ${1:ChunkName}}
+	knitr::include_graphics("${2:Path}")
+	```
+snippet mdpic
+	![${1:AltText}](${2:Path})
+	${0}
+
+snippet br
+	##### Break
+	${0}
+
+snippet fn
+	[^${1:num}] ${0}
+
+snippet fnd
+	[^${1:num}]:${2:detail}
+
+snippet gg
+	```{r ${1:label}}
+	${2:data} %>%
+	ggplot() +
+		geom_${3}(mapping = aes(${4:aes})) +                                 
+		xlab(${5:label}) +
+		ylab(${6:label}) +
+		ggtitle(${7:label})
+	${0}
+	```

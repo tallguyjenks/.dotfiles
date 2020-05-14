@@ -1,0 +1,936 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'m
+	/home/bryan
+	test.csv
+1569648989
+'v
+	/home/bryan/Books/unread
+	bashCommands
+1572236415
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/bryan/.local/bin
+	statusbar
+3
+d/home/bryan/.local/bin/statusbar
+	youtubesubs
+20
+d/home/bryan
+	Downloads
+2
+d/home/bryan/Downloads
+	main.sh
+3
+d/home/bryan
+	Research
+9
+d/home/bryan/Research
+	unread
+5
+d/home/bryan
+	R
+8
+d/home/bryan/R
+	x86_64-pc-linux-gnu-library
+5
+d/home/bryan/R/x86_64-pc-linux-gnu-library
+	3.6
+1
+d/home/bryan/R/x86_64-pc-linux-gnu-library/3.6
+	shinydashboardPlus
+29
+d/home/bryan/R/x86_64-pc-linux-gnu-library/3.6/shinydashboardPlus
+	R
+2
+d/home/bryan/R/x86_64-pc-linux-gnu-library/3.6/shinydashboardPlus/R
+	shinydashboardPlus
+1
+d/home/bryan/R/x86_64-pc-linux-gnu-library/3.6/shinydashboardPlus
+	examples
+5
+d/home/bryan/R/x86_64-pc-linux-gnu-library/3.6/shinydashboardPlus/examples
+	header_tab.R
+9
+d/home/bryan
+	GithubRepos
+3
+d/home/bryan/GithubRepos
+	CV
+1
+d/home/bryan/GithubRepos/CV
+	CV.pdf
+6
+d/home/bryan
+	Documents
+1
+d/home/bryan/Documents
+	education
+3
+d/home/bryan/Documents/education
+	04WGU
+5
+d/home/bryan/Documents/education/04WGU
+	wguLogin.png
+8
+d/home/bryan
+	GithubRepos
+3
+d/home/bryan/GithubRepos
+	tallguyjenks.github.io
+11
+d/home/bryan/GithubRepos/tallguyjenks.github.io
+	..
+0
+d/home/bryan
+	Downloads
+2
+d/home/bryan/Downloads
+	onlyfans.com
+2
+d/home/bryan/Downloads/onlyfans.com
+	Post - Onlyfans - 5-7-2020 8-43-02 AM
+1
+d/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM
+	..
+0
+d/home/bryan
+	Downloads
+2
+d/home/bryan/Downloads
+	main.sh
+2
+d/home/bryan/.abook
+	abook
+1
+d/home/bryan/.abook/abook
+	..
+0
+d/home/bryan/.abook
+	abook
+1
+d/home/bryan/.abook/abook
+	..
+0
+d/home/bryan/.abook
+	addressbook
+1
+
+# Right window history (oldest to newest):
+D/home/bryan
+	
+0
+D/home/bryan/GithubRepos
+	
+0
+D/home/bryan
+	Pictures
+13
+D/home/bryan/Pictures
+	people
+7
+D/home/bryan/Pictures/people
+	me
+4
+D/home/bryan/Pictures/people/me
+	2019
+2
+D/home/bryan/Pictures/people/me/2019
+	..
+0
+D/home/bryan/Pictures/people/me
+	00PRE2019
+1
+D/home/bryan/Pictures/people/me/00PRE2019
+	11692553_10206178082947040_8099202019722193958_n.jpg
+9
+D/home/bryan
+	
+0
+D/home/bryan/.local/bin
+	
+0
+D/home/bryan
+	..
+0
+D/home
+	bryan
+1
+D/
+	home
+4
+D/home/bryan
+	..
+0
+D/mnt
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/.local/share
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/Research/THEWAY
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/.local/share/mail/protonmail
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/.config/nvim
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/.local/share/vifm/Trash
+	
+0
+D/home/bryan/VimWiki
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/Documents
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/Youtube
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/.local
+	
+0
+D/home/bryan
+	
+0
+D/home/bryan/.abook
+	
+0
+
+# Command line history (oldest to newest):
+:cd .local/share/flash/
+:mkdir info_videos
+:mkdir Books
+:mv vimbook-OPL.pdf ~/Books
+:vim
+:|nvim
+:mv Bank Statements 
+:mkdir unread/vim
+:mkdir lifeInsurance
+:cw
+:cd .config/calcurse/notes
+:touch meditations.md
+:cp rsync.md
+:mkdir linux
+:mkdir LinuxCommandLineAndScriptingBible-RichardBlum
+:touch linuxCommandLineAndScriptingBible
+:mkdir bashCommands
+:mv *.pdf bashCommands
+:wq
+:rm -r *
+:help
+:touch rustResources.md
+:mkdir python
+:touch
+:sudo vim mutt-wizard.muttrc
+:mv unnamed.jpg 00-MISC
+:cd .local/bin/
+:cd .local/
+:cd .local/share/
+:cd .cache/
+:cd ../.config/
+:cd .config/
+:q
+
+# Search history (oldest to newest):
+/fin
+/pacm
+/pac
+/pacman
+/pro
+/vi
+/mu
+/nu
+/blod
+/musi
+/Src
+/g
+/f
+/fi
+/c
+/F
+/zz
+/mutt
+/Git
+/vim
+/down
+/pic
+/dow
+/you
+/doc
+/gru
+/resea
+/R
+/r
+/git
+/in
+/null
+/pass
+/nvi
+/shiny
+
+# Prompt history (oldest to newest):
+ptellico
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/bryan/.local/share/vifm/Trash/000_abook
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/bryan/.local/share/vifm/Trash/000_screencast-190911-1643-14.mkv
+	/mnt/DCIM/101CANON/screencast-190911-1643-14.mkv
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-190918-1052-01.png
+	/home/bryan/pic-full-190918-1052-01.png
+t/home/bryan/.local/share/vifm/Trash/000_screencast-190918-1833-25.mkv
+	/home/bryan/screencast-190918-1833-25.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Documents
+	/mnt/Documents
+t/home/bryan/.local/share/vifm/Trash/000_gitRepos
+	/mnt/gitRepos
+t/home/bryan/.local/share/vifm/Trash/008_Thumbs.db
+	/home/bryan/Transfer/pictures/friends/nana/nanaAndIVideo/20150715-RedwoodsTrip/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/009_Thumbs.db
+	/home/bryan/Transfer/pictures/friends/nana/nanaAndIVideo/20150723-Bluestreak/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/010_Thumbs.db
+	/home/bryan/Transfer/pictures/friends/nana/nanaAndIVideo/20150806-CabinTripInPlumas/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/025_Thumbs.db
+	/home/bryan/Pictures/myPhotography/20140817/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/000_130701_orig.jpg
+	/home/bryan/Pictures/wallpapers/fantasy/130701_orig.jpg
+t/home/bryan/.local/share/vifm/Trash/000_notes
+	/home/bryan/Research/notes
+t/home/bryan/.local/share/vifm/Trash/030_Thumbs.db
+	/home/bryan/Pictures/myPhotography/01-CabinVacations/20140704/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/000_movies
+	/home/bryan/Pictures/people/friends/nana/myPhotos/20150705-WeekendAtRobinsHouseInSantaCruz/movies
+t/home/bryan/.local/share/vifm/Trash/000_video
+	/home/bryan/Pictures/people/friends/nana/myPhotos/20150719-RedwoodsTrip/video
+t/home/bryan/.local/share/vifm/Trash/001_video
+	/home/bryan/Pictures/people/friends/nana/myPhotos/20150806-CabinTripInPlumas/video
+t/home/bryan/.local/share/vifm/Trash/031_Thumbs.db
+	/home/bryan/Pictures/people/friends/nana/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/032_Thumbs.db
+	/home/bryan/Pictures/people/me/2010-SanFranTrip/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/033_Thumbs.db
+	/home/bryan/Pictures/people/me/handstands/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/034_Thumbs.db
+	/home/bryan/Pictures/people/me/meInASuit/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/035_Thumbs.db
+	/home/bryan/Pictures/people/me/muscleTimeLine/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/036_Thumbs.db
+	/home/bryan/Pictures/people/me/tattoos/Thumbs.db
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-190920-0025-55.png
+	/home/bryan/Books/reading/Meditations-MarcusAurelius/pic-full-190920-0025-55.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-190920-0025-55.png
+	/home/bryan/pic-full-190920-0025-55.png
+t/home/bryan/.local/share/vifm/Trash/000_screencast-190920-2043-02.mkv
+	/home/bryan/screencast-190920-2043-02.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-190920-2044-57.mkv
+	/home/bryan/screencast-190920-2044-57.mkv
+t/home/bryan/.local/share/vifm/Trash/000_temp
+	/home/bryan/temp
+t/home/bryan/.local/share/vifm/Trash/000_fileDirectoryVideo.mkv
+	/home/bryan/fileDirectoryVideo.mkv
+t/home/bryan/.local/share/vifm/Trash/000_r-rmarkdown
+	/home/bryan/Programs/r-rmarkdown
+t/home/bryan/.local/share/vifm/Trash/000_nohup.out
+	/home/bryan/nohup.out
+t/home/bryan/.local/share/vifm/Trash/000_Rplots.pdf
+	/home/bryan/Rplots.pdf
+t/home/bryan/.local/share/vifm/Trash/000_README.pdf
+	/home/bryan/README.pdf
+t/home/bryan/.local/share/vifm/Trash/000_index.pdf
+	/home/bryan/vimwiki/index.pdf
+t/home/bryan/.local/share/vifm/Trash/000_screencast-190926-1827-01.mkv
+	/home/bryan/screencast-190926-1827-01.mkv
+t/home/bryan/.local/share/vifm/Trash/000_index.md
+	/home/bryan/Research/index.md
+t/home/bryan/.local/share/vifm/Trash/000_test.csv
+	/home/bryan/test.csv
+t/home/bryan/.local/share/vifm/Trash/000_Image from iOS.jpg
+	/home/bryan/Downloads/Image from iOS.jpg
+t/home/bryan/.local/share/vifm/Trash/000_test.Rmd
+	/home/bryan/R/test.Rmd
+t/home/bryan/.local/share/vifm/Trash/000_test.nb.html
+	/home/bryan/R/test.nb.html
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191004-1918-55.mkv
+	/home/bryan/screencast-191004-1918-55.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Downloading Videos, Music and More with Youtube DL-9A-HLSvtBWc.mkv
+	/home/bryan/Downloading Videos, Music and More with Youtube DL-9A-HLSvtBWc.mkv
+t/home/bryan/.local/share/vifm/Trash/001_Downloading Videos, Music and More with Youtube DL-9A-HLSvtBWc.mkv
+	/home/bryan/Videos/youtube/Downloading Videos, Music and More with Youtube DL-9A-HLSvtBWc.mkv
+t/home/bryan/.local/share/vifm/Trash/000_youtube
+	/home/bryan/Videos/youtube
+t/home/bryan/.local/share/vifm/Trash/001_Downloading Videos, Music and More with Youtube DL-9A-HLSvtBWc.f248.webm.part
+	/home/bryan/Downloading Videos, Music and More with Youtube DL-9A-HLSvtBWc.f248.webm.part
+t/home/bryan/.local/share/vifm/Trash/000_HTML-Notes.html
+	/home/bryan/Research/frontEndDev/HTML-Notes.html
+t/home/bryan/.local/share/vifm/Trash/000_HTML_Notes.html
+	/home/bryan/Research/frontEndDev/HTML_Notes.html
+t/home/bryan/.local/share/vifm/Trash/000_template.csv
+	/home/bryan/Finances/finances/2020/template.csv
+t/home/bryan/.local/share/vifm/Trash/000_html5.pdf
+	/home/bryan/VimWiki/html5.pdf
+t/home/bryan/.local/share/vifm/Trash/000_i3blocks Status Bar (RELOADED)-gKumet6b-WY.mkv
+	/home/bryan/Videos/project/i3blocks Status Bar (RELOADED)-gKumet6b-WY.mkv
+t/home/bryan/.local/share/vifm/Trash/000_dmenu - Your own Custom Script Menus!-R9m723tAurA.mkv
+	/home/bryan/Videos/project/dmenu - Your own Custom Script Menus!-R9m723tAurA.mkv
+t/home/bryan/.local/share/vifm/Trash/000_dmenu tips - Emojis and more-UCEXY46t3OA.mkv
+	/home/bryan/Videos/project/dmenu tips - Emojis and more-UCEXY46t3OA.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Basic File Encryption with GPG key pairs!-DMGIlj7u7Eo.webm
+	/home/bryan/Videos/project/Basic File Encryption with GPG key pairs!-DMGIlj7u7Eo.webm
+t/home/bryan/.local/share/vifm/Trash/000_Custom Scripts and Modules for i3blocks!-n7_9Xdbsem4.mkv
+	/home/bryan/Videos/project/Custom Scripts and Modules for i3blocks!-n7_9Xdbsem4.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Selecting terminal URLs with URLview-IgzpAjFgbCw.mkv
+	/home/bryan/Videos/project/Selecting terminal URLs with URLview-IgzpAjFgbCw.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Tiling Window Management and i3wm config additions-GKviflL9XeI.mkv
+	/home/bryan/Videos/project/Tiling Window Management and i3wm config additions-GKviflL9XeI.mkv
+t/home/bryan/.local/share/vifm/Trash/000_st (suckless terminal) - vim bindings, Xresources and pywal compatibility and more-9H75enWM22k.mkv
+	/home/bryan/Videos/project/st (suckless terminal) - vim bindings, Xresources and pywal compatibility and more-9H75enWM22k.mkv
+t/home/bryan/.local/share/vifm/Trash/000_My st (suckless terminal) Build - The Even Bester Terminal!-FJmm7wl4JUI.mkv
+	/home/bryan/Videos/project/My st (suckless terminal) Build - The Even Bester Terminal!-FJmm7wl4JUI.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Easy Screencasting and Webcamming with ffmpeg in Linux-386Z2yeQ5fo.mkv
+	/home/bryan/Videos/project/Easy Screencasting and Webcamming with ffmpeg in Linux-386Z2yeQ5fo.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Great Music is Unpronounceable - ncmpcpp w_ mpd-sZIEdI9TS2U.mkv
+	/home/bryan/Videos/project/Great Music is Unpronounceable - ncmpcpp w_ mpd-sZIEdI9TS2U.mkv
+t/home/bryan/.local/share/vifm/Trash/000_zathura - A vim-based minimalist PDF_djvu_ps_epub_comic book reader-V_Iz4zdyRM4.mp4
+	/home/bryan/Videos/project/zathura - A vim-based minimalist PDF_djvu_ps_epub_comic book reader-V_Iz4zdyRM4.mp4
+t/home/bryan/.local/share/vifm/Trash/000_project
+	/home/bryan/Videos/project
+t/home/bryan/.local/share/vifm/Trash/000_1
+	/home/bryan/1
+t/home/bryan/.local/share/vifm/Trash/000_TODO.md
+	/home/bryan/TODO.md
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191009-1110-43.mkv
+	/home/bryan/screencast-191009-1110-43.mkv
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-190920-0025-55.png
+	/mnt/bryan/pic-full-190920-0025-55.png
+t/home/bryan/.local/share/vifm/Trash/000_bryan
+	/mnt/bryan
+t/home/bryan/.local/share/vifm/Trash/000_Mail
+	/home/bryan/Mail
+t/home/bryan/.local/share/vifm/Trash/000_dataViz.zip
+	/home/bryan/Books/unread/dataViz.zip
+t/home/bryan/.local/share/vifm/Trash/000_emacs.zip
+	/home/bryan/Books/unread/emacs.zip
+t/home/bryan/.local/share/vifm/Trash/000_linuxP1.zip
+	/home/bryan/Books/unread/linuxP1.zip
+t/home/bryan/.local/share/vifm/Trash/000_linux.zip
+	/home/bryan/Books/unread/linux.zip
+t/home/bryan/.local/share/vifm/Trash/000_bash.zip
+	/home/bryan/Books/unread/bash.zip
+t/home/bryan/.local/share/vifm/Trash/000_rFinal.zip
+	/home/bryan/Books/unread/r/rFinal.zip
+t/home/bryan/.local/share/vifm/Trash/000_rFinal
+	/home/bryan/Books/unread/r/rFinal
+t/home/bryan/.local/share/vifm/Trash/000_linuxP1
+	/home/bryan/Books/unread/linuxP1
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191019-2143-31.mkv
+	/home/bryan/screencast-191019-2143-31.mkv
+t/home/bryan/.local/share/vifm/Trash/001_test
+	/home/bryan/VimWiki/test
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191020-0022-41.png
+	/home/bryan/pic-full-191020-0022-41.png
+t/home/bryan/.local/share/vifm/Trash/000_external-content.duckduckgo.com.jpg
+	/home/bryan/external-content.duckduckgo.com.jpg
+t/home/bryan/.local/share/vifm/Trash/001_external-content.duckduckgo.com.png
+	/home/bryan/external-content.duckduckgo.com.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191020-0030-48.png
+	/home/bryan/pic-full-191020-0030-48.png
+t/home/bryan/.local/share/vifm/Trash/000_vscodium.png
+	/home/bryan/vscodium.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191020-0035-07.png
+	/home/bryan/pic-full-191020-0035-07.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191020-0039-00.png
+	/home/bryan/pic-full-191020-0039-00.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191019-2352-31.png
+	/home/bryan/pic-full-191019-2352-31.png
+t/home/bryan/.local/share/vifm/Trash/000_autoCompiler.mkv
+	/home/bryan/Videos/autoCompiler.mkv
+t/home/bryan/.local/share/vifm/Trash/000_bills.csv
+	/home/bryan/Finances/accounting/2020/1/bills/bills.csv
+t/home/bryan/.local/share/vifm/Trash/000_D3.md
+	/home/bryan/VimWiki/D3.md
+t/home/bryan/.local/share/vifm/Trash/000_proton
+	/home/bryan/.local/share/mail/proton
+t/home/bryan/.local/share/vifm/Trash/000_key
+	/home/bryan/key
+t/home/bryan/.local/share/vifm/Trash/000_154B1442-C07D-4D72-BC4F-D6BD594BA1A0.jpg
+	/home/bryan/154B1442-C07D-4D72-BC4F-D6BD594BA1A0.jpg
+t/home/bryan/.local/share/vifm/Trash/001_protonmailAll Mail
+	/home/bryan/.local/share/mail/protonmailAll Mail
+t/home/bryan/.local/share/vifm/Trash/001_protonmail
+	/home/bryan/.cache/protonmail
+t/home/bryan/.local/share/vifm/Trash/000_ProtonMail Bridge
+	/home/bryan/.cache/ProtonMail Bridge
+t/home/bryan/.local/share/vifm/Trash/000_mutt_terms
+	/home/bryan/.cache/mutt_terms
+t/home/bryan/.local/share/vifm/Trash/000_qt_compose_cache_little_endian_82194de815a14eb79001ca0207a3c245
+	/home/bryan/.cache/qt_compose_cache_little_endian_82194de815a14eb79001ca0207a3c245
+t/home/bryan/.local/share/vifm/Trash/000_addressBook.md
+	/home/bryan/addressBook.md
+t/home/bryan/.local/share/vifm/Trash/000_log.txt
+	/home/bryan/log.txt
+t/home/bryan/.local/share/vifm/Trash/000_vim-taskwarrior
+	/home/bryan/.config/nvim/plugged/vim-taskwarrior
+t/home/bryan/.local/share/vifm/Trash/000_Joe Rogan Experience #1368 - Edward Snowden-efs3QRr8LWw.m4a
+	/home/bryan/Joe Rogan Experience #1368 - Edward Snowden-efs3QRr8LWw.m4a
+t/home/bryan/.local/share/vifm/Trash/000_vimwiki.mkv
+	/home/bryan/Videos/vimwiki.mkv
+t/home/bryan/.local/share/vifm/Trash/000_html5-boilerplate
+	/home/bryan/GithubRepos/html5-boilerplate
+t/home/bryan/.local/share/vifm/Trash/000_test.rs
+	/home/bryan/test.rs
+t/home/bryan/.local/share/vifm/Trash/000_1039980157-054.jpg
+	/home/bryan/1039980157-054.jpg
+t/home/bryan/.local/share/vifm/Trash/000_ra_0_1039980157-054.jpg
+	/home/bryan/ra_0_1039980157-054.jpg
+t/home/bryan/.local/share/vifm/Trash/000_scim
+	/home/bryan/.local/bin/tools/scim
+t/home/bryan/.local/share/vifm/Trash/000_gatherpref
+	/home/bryan/.local/bin/tools/gatherpref
+t/home/bryan/.local/share/vifm/Trash/000_LinuxCommandLineAndScriptingBible-RichardBlum
+	/home/bryan/Books/reading/LinuxCommandLineAndScriptingBible-RichardBlum
+t/home/bryan/.local/share/vifm/Trash/000_test
+	/home/bryan/test
+t/home/bryan/.local/share/vifm/Trash/000_Queens Guard Treasury.csv
+	/home/bryan/Queens Guard Treasury.csv
+t/home/bryan/.local/share/vifm/Trash/000_monthlyTransactionsPersonal.sc
+	/home/bryan/Finances/accounting/2019/monthlyTransactionsPersonal.sc
+t/home/bryan/.local/share/vifm/Trash/000_12
+	/home/bryan/Finances/accounting/2019/12
+t/home/bryan/.local/share/vifm/Trash/000_alltickets.pdf
+	/home/bryan/alltickets.pdf
+t/home/bryan/.local/share/vifm/Trash/000_bryan ticket.pdf
+	/home/bryan/bryan ticket.pdf
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191101-1716-03.png
+	/home/bryan/pic-full-191101-1716-03.png
+t/home/bryan/.local/share/vifm/Trash/000_ticket1.pdf
+	/home/bryan/ticket1.pdf
+t/home/bryan/.local/share/vifm/Trash/000_ticket2.pdf
+	/home/bryan/ticket2.pdf
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191108-2200-07.mkv
+	/home/bryan/screencast-191108-2200-07.mkv
+t/home/bryan/.local/share/vifm/Trash/000_pulseaudio
+	/home/bryan/pulseaudio
+t/home/bryan/.local/share/vifm/Trash/000_dumbell.rmd
+	/home/bryan/dumbell.rmd
+t/home/bryan/.local/share/vifm/Trash/000_BBW_Track_Progress.zip
+	/home/bryan/Downloads/BBW_Track_Progress.zip
+t/home/bryan/.local/share/vifm/Trash/000_BBW_Workouts.zip
+	/home/bryan/Downloads/BBW_Workouts.zip
+t/home/bryan/.local/share/vifm/Trash/000_BBW_Track_Progress
+	/home/bryan/Downloads/BBW_Track_Progress
+t/home/bryan/.local/share/vifm/Trash/000_!
+	/home/bryan/!
+t/home/bryan/.local/share/vifm/Trash/000_tasksTODO.md
+	/home/bryan/tasksTODO.md
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191119-2304-09.png
+	/home/bryan/pic-full-191119-2304-09.png
+t/home/bryan/.local/share/vifm/Trash/000_weightSetForSale.jpg
+	/home/bryan/weightSetForSale.jpg
+t/home/bryan/.local/share/vifm/Trash/000_Learn Python with Socratica _ Python Tutorial _ Python Programming by Socratica on 20140330 in Python Programming Tutorials (Computer Science).mp4.part
+	/home/bryan/Learn Python with Socratica _ Python Tutorial _ Python Programming by Socratica on 20140330 in Python Programming Tutorials (Computer Science).mp4.part
+t/home/bryan/.local/share/vifm/Trash/000_IMG_3576.JPG
+	/home/bryan/IMG_3576.JPG
+t/home/bryan/.local/share/vifm/Trash/000_claimForm.pdf
+	/home/bryan/claimForm.pdf
+t/home/bryan/.local/share/vifm/Trash/000_html_files
+	/home/bryan/Collections/html_files
+t/home/bryan/.local/share/vifm/Trash/000_11589689180190.png
+	/home/bryan/Collections/11589689180190.png
+t/home/bryan/.local/share/vifm/Trash/000_external-content.duckduckgo.com.jpg
+	/home/bryan/Collections/external-content.duckduckgo.com.jpg
+t/home/bryan/.local/share/vifm/Trash/000_html.html
+	/home/bryan/Collections/html.html
+t/home/bryan/.local/share/vifm/Trash/000_8809206317086.png
+	/home/bryan/Collections/8809206317086.png
+t/home/bryan/.local/share/vifm/Trash/000_ForestVille_Bottle-Shot_1.5L-MR.jpg
+	/home/bryan/Collections/ForestVille_Bottle-Shot_1.5L-MR.jpg
+t/home/bryan/.local/share/vifm/Trash/000_gnucash
+	/home/bryan/gnucash
+t/home/bryan/.local/share/vifm/Trash/000_testrecord.cast
+	/home/bryan/testrecord.cast
+t/home/bryan/.local/share/vifm/Trash/000_py.log
+	/home/bryan/py.log
+t/home/bryan/.local/share/vifm/Trash/000_gruvbox
+	/home/bryan/.config/nvim/plugged/gruvbox
+t/home/bryan/.local/share/vifm/Trash/000_yats.vim
+	/home/bryan/.config/nvim/plugged/yats.vim
+t/home/bryan/.local/share/vifm/Trash/001_python
+	/home/bryan/Research/python
+t/home/bryan/.local/share/vifm/Trash/000_linux
+	/home/bryan/Research/linux
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191126-2233-03.png
+	/home/bryan/pic-full-191126-2233-03.png
+t/home/bryan/.local/share/vifm/Trash/000_personalFinances.gnucash
+	/home/bryan/Finances/gnucash/personalFinances.gnucash
+t/home/bryan/.local/share/vifm/Trash/000_personalFinances.gnucash.-1463791103.32689.LNK
+	/home/bryan/Finances/gnucash/personalFinances.gnucash.-1463791103.32689.LNK
+t/home/bryan/.local/share/vifm/Trash/000_personalFinances.gnucash.LCK
+	/home/bryan/Finances/gnucash/personalFinances.gnucash.LCK
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191127-1517-18.png
+	/home/bryan/pic-full-191127-1517-18.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191126-2235-32.png
+	/home/bryan/pic-full-191126-2235-32.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191127-0017-39.png
+	/home/bryan/pic-full-191127-0017-39.png
+t/home/bryan/.local/share/vifm/Trash/000_blogposts.html
+	/home/bryan/blogposts.html
+t/home/bryan/.local/share/vifm/Trash/000_neomuttVid.mkv
+	/home/bryan/neomuttVid.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191204-2212-41.mkv
+	/home/bryan/screencast-191204-2212-41.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191204-2211-45.mkv
+	/home/bryan/screencast-191204-2211-45.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191204-2214-03.mkv
+	/home/bryan/screencast-191204-2214-03.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191205-2045-59.mkv
+	/home/bryan/screencast-191205-2045-59.mkv
+t/home/bryan/.local/share/vifm/Trash/000_1
+	/home/bryan/Youtube/1
+t/home/bryan/.local/share/vifm/Trash/000_Subscription status 2019-11-07_2019-12-05 Bryan Jenks
+	/home/bryan/Subscription status 2019-11-07_2019-12-05 Bryan Jenks
+t/home/bryan/.local/share/vifm/Trash/000_Subscription status 2019-11-07_2019-12-05 Bryan Jenks.zip
+	/home/bryan/Subscription status 2019-11-07_2019-12-05 Bryan Jenks.zip
+t/home/bryan/.local/share/vifm/Trash/000_LL_Workouts
+	/home/bryan/Downloads/LL_Workouts
+t/home/bryan/.local/share/vifm/Trash/000_LL_Workouts.zip
+	/home/bryan/Downloads/LL_Workouts.zip
+t/home/bryan/.local/share/vifm/Trash/000_C02D1D30-1D04-4374-BCFC-73EB24CB0711.jpg
+	/home/bryan/C02D1D30-1D04-4374-BCFC-73EB24CB0711.jpg
+t/home/bryan/.local/share/vifm/Trash/000_A-pythonTest
+	/home/bryan/A-pythonTest
+t/home/bryan/.local/share/vifm/Trash/000_twitter.svg
+	/home/bryan/Downloads/twitter.svg
+t/home/bryan/.local/share/vifm/Trash/000_Bonus_Workout__Band_Special_
+	/home/bryan/Downloads/Bonus_Workout__Band_Special_
+t/home/bryan/.local/share/vifm/Trash/000_Bonus_Workout__Band_Special_.zip
+	/home/bryan/Downloads/Bonus_Workout__Band_Special_.zip
+t/home/bryan/.local/share/vifm/Trash/000_csvtellico.csv
+	/home/bryan/csvtellico.csv
+t/home/bryan/.local/share/vifm/Trash/000_lb
+	/home/bryan/GithubRepos/tallguyjenks.github.io/lb
+t/home/bryan/.local/share/vifm/Trash/000_20170331 Learn LaTeX Tutorial (1) - Basic Compiling, Titles, Sections, Formatting and Syntax by Luke Smith.mp4.part
+	/home/bryan/20170331 Learn LaTeX Tutorial (1) - Basic Compiling, Titles, Sections, Formatting and Syntax by Luke Smith.mp4.part
+t/home/bryan/.local/share/vifm/Trash/000_20170602 How to Install, Use and Extend LaTeX by Luke Smith.mp4
+	/home/bryan/20170602 How to Install, Use and Extend LaTeX by Luke Smith.mp4
+t/home/bryan/.local/share/vifm/Trash/000_youtubeDL.pdf
+	/home/bryan/VimWiki/youtubeDL.pdf
+t/home/bryan/.local/share/vifm/Trash/000_{geizler,
+	/home/bryan/zzPrawn/{geizler,
+t/home/bryan/.local/share/vifm/Trash/000_jenay,
+	/home/bryan/zzPrawn/jenay,
+t/home/bryan/.local/share/vifm/Trash/000_nana}
+	/home/bryan/zzPrawn/nana}
+t/home/bryan/.local/share/vifm/Trash/000_test.pdf
+	/home/bryan/test.pdf
+t/home/bryan/.local/share/vifm/Trash/000_test.tex
+	/home/bryan/test.tex
+t/home/bryan/.local/share/vifm/Trash/000_Ronald P. Cody, Ray Pass, Sas Institute - SAS(R) programming by example-SAS Publishing (1995).pdf
+	/home/bryan/Downloads/Ronald P. Cody, Ray Pass, Sas Institute - SAS(R) programming by example-SAS Publishing (1995).pdf
+t/home/bryan/.local/share/vifm/Trash/000_testIntroduction.pdf
+	/home/bryan/Downloads/testIntroduction.pdf
+t/home/bryan/.local/share/vifm/Trash/000_Danheim & Gealdýr - Ymir-PskDLbP1x1o.webm
+	/home/bryan/Danheim & Gealdýr - Ymir-PskDLbP1x1o.webm
+t/home/bryan/.local/share/vifm/Trash/000_backpackingGearList.pdf
+	/home/bryan/backpackingGearList.pdf
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191215-1318-05.mkv
+	/home/bryan/screencast-191215-1318-05.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191215-1318-40.mkv
+	/home/bryan/screencast-191215-1318-40.mkv
+t/home/bryan/.local/share/vifm/Trash/000_test.html
+	/home/bryan/test.html
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191215-1318-59.mkv
+	/home/bryan/screencast-191215-1318-59.mkv
+t/home/bryan/.local/share/vifm/Trash/000_AA-LaTeX
+	/home/bryan/AA-LaTeX
+t/home/bryan/.local/share/vifm/Trash/000_LaTeX
+	/home/bryan/Documents/LaTeX
+t/home/bryan/.local/share/vifm/Trash/000_external-content.duckduckgo.com.jpg
+	/home/bryan/Youtube/external-content.duckduckgo.com.jpg
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-191215-1341-46.png
+	/home/bryan/Youtube/pic-full-191215-1341-46.png
+t/home/bryan/.local/share/vifm/Trash/000_05codeChunkRunningHotkeys
+	/home/bryan/Youtube/05RMDSeries/05codeChunkRunningHotkeys
+t/home/bryan/.local/share/vifm/Trash/000_screencast-191221-1100-04.mkv
+	/home/bryan/screencast-191221-1100-04.mkv
+t/home/bryan/.local/share/vifm/Trash/000_limelight.vim
+	/home/bryan/.config/nvim/plugged/limelight.vim
+t/home/bryan/.local/share/vifm/Trash/000_lazy-nondet.pdf
+	/home/bryan/Downloads/lazy-nondet.pdf
+t/home/bryan/.local/share/vifm/Trash/000_lazy-nondet.txt
+	/home/bryan/Downloads/lazy-nondet.txt
+t/home/bryan/.local/share/vifm/Trash/000_Defining the Competencies Programming Languages and Assessments.pdf
+	/home/bryan/Downloads/Defining the Competencies Programming Languages and Assessments.pdf
+t/home/bryan/.local/share/vifm/Trash/000_Defining the Competencies Programming Languages and Assessments.txt
+	/home/bryan/Downloads/Defining the Competencies Programming Languages and Assessments.txt
+t/home/bryan/.local/share/vifm/Trash/000_01newMarkdownCodeSnippets
+	/home/bryan/Youtube/01newMarkdownCodeSnippets
+t/home/bryan/.local/share/vifm/Trash/000_Attachments-goals.xlsx.zip
+	/home/bryan/Downloads/Attachments-goals.xlsx.zip
+t/home/bryan/.local/share/vifm/Trash/000_Attachments-goals.xlsx
+	/home/bryan/Downloads/Attachments-goals.xlsx
+t/home/bryan/.local/share/vifm/Trash/000_AA-Heathen
+	/home/bryan/AA-Heathen
+t/home/bryan/.local/share/vifm/Trash/000_gnucash
+	/home/bryan/Finances/gnucash
+t/home/bryan/.local/share/vifm/Trash/000_02pandocReferencesWithBib
+	/home/bryan/Youtube/05RMDSeries/02pandocReferencesWithBib
+t/home/bryan/.local/share/vifm/Trash/000_03usingCodeChunksAndTheirOptions
+	/home/bryan/Youtube/05RMDSeries/03usingCodeChunksAndTheirOptions
+t/home/bryan/.local/share/vifm/Trash/000_2019 WellsFargo Tax Documents
+	/home/bryan/Downloads/2019 WellsFargo Tax Documents
+t/home/bryan/.local/share/vifm/Trash/000_2019 WellsFargo Tax Documents.zip
+	/home/bryan/Downloads/2019 WellsFargo Tax Documents.zip
+t/home/bryan/.local/share/vifm/Trash/000_work.md
+	/home/bryan/GithubRepos/CV/data/work.md
+t/home/bryan/.local/share/vifm/Trash/000_05rmdExportFormatsandRpres
+	/home/bryan/Youtube/05RMDSeries/05rmdExportFormatsandRpres
+t/home/bryan/.local/share/vifm/Trash/000_README.pdf
+	/home/bryan/GithubRepos/CV/README.pdf
+t/home/bryan/.local/share/vifm/Trash/000_README.pdf
+	/home/bryan/GithubRepos/RPackageReviews/README.pdf
+t/home/bryan/.local/share/vifm/Trash/000_pic-selected-200109-2030-45.png
+	/home/bryan/pic-selected-200109-2030-45.png
+t/home/bryan/.local/share/vifm/Trash/000_06CodeSnippetsandHotkeys
+	/home/bryan/Youtube/05RMDSeries/06CodeSnippetsandHotkeys
+t/home/bryan/.local/share/vifm/Trash/000_LBRY_0.38.2.deb
+	/home/bryan/Downloads/LBRY_0.38.2.deb
+t/home/bryan/.local/share/vifm/Trash/000_index.png
+	/home/bryan/Downloads/index.png
+t/home/bryan/.local/share/vifm/Trash/000_^.*}
+	/home/bryan/^.*}
+t/home/bryan/.local/share/vifm/Trash/000_{.}*}
+	/home/bryan/{.}*}
+t/home/bryan/.local/share/vifm/Trash/000_07htmlWikisAndTabsets
+	/home/bryan/Youtube/05RMDSeries/07htmlWikisAndTabsets
+t/home/bryan/.local/share/vifm/Trash/000_Statement.pdf
+	/home/bryan/Downloads/Statement.pdf
+t/home/bryan/.local/share/vifm/Trash/000_2019-101credit card 0710.pdf
+	/home/bryan/Documents/Finances/bankStatements/0710/2019-101credit card 0710.pdf
+t/home/bryan/.local/share/vifm/Trash/000_image0.jpeg
+	/home/bryan/image0.jpeg
+t/home/bryan/.local/share/vifm/Trash/000_*}
+	/home/bryan/Youtube/*}
+t/home/bryan/.local/share/vifm/Trash/000_\*}
+	/home/bryan/Youtube/\*}
+t/home/bryan/.local/share/vifm/Trash/000_}
+	/home/bryan/Youtube/}
+t/home/bryan/.local/share/vifm/Trash/000_Youtube}
+	/home/bryan/Youtube}
+t/home/bryan/.local/share/vifm/Trash/000_accounting
+	/home/bryan/Documents/Finances/accounting
+t/home/bryan/.local/share/vifm/Trash/000_screencast-200113-1721-44.mkv
+	/home/bryan/screencast-200113-1721-44.mkv
+t/home/bryan/.local/share/vifm/Trash/000_UBJvSkP1.rss
+	/home/bryan/UBJvSkP1.rss
+t/home/bryan/.local/share/vifm/Trash/000_e_JDxtrY.rss
+	/home/bryan/e_JDxtrY.rss
+t/home/bryan/.local/share/vifm/Trash/000_pic-selected-200113-2003-02.png
+	/home/bryan/pic-selected-200113-2003-02.png
+t/home/bryan/.local/share/vifm/Trash/000_05RMDSeries
+	/home/bryan/Youtube/05RMDSeries
+t/home/bryan/.local/share/vifm/Trash/000_announceRPackageReview.mkv
+	/home/bryan/Youtube/announceRPackageReview.mkv
+t/home/bryan/.local/share/vifm/Trash/000_rPackageReviewMagrittr.mkv
+	/home/bryan/Youtube/rPackageReviewMagrittr.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-200114-2024-42.mkv
+	/home/bryan/screencast-200114-2024-42.mkv
+t/home/bryan/.local/share/vifm/Trash/000_screencast-200114-2025-35.mkv
+	/home/bryan/screencast-200114-2025-35.mkv
+t/home/bryan/.local/share/vifm/Trash/000_README.pdf
+	/home/bryan/GithubRepos/runes/README.pdf
+t/home/bryan/.local/share/vifm/Trash/000_test.rmd
+	/home/bryan/test.rmd
+t/home/bryan/.local/share/vifm/Trash/000_gnucash-git
+	/home/bryan/Programs/gnucash-git
+t/home/bryan/.local/share/vifm/Trash/000_mutt-wizard
+	/home/bryan/Programs/mutt-wizard
+t/home/bryan/.local/share/vifm/Trash/000_zzDisasterRecovery
+	/home/bryan/zzDisasterRecovery
+t/home/bryan/.local/share/vifm/Trash/000_Work
+	/home/bryan/Work
+t/home/bryan/.local/share/vifm/Trash/000_r
+	/home/bryan/Research/r
+t/home/bryan/.local/share/vifm/Trash/000_FCCEG-VimPresentation
+	/home/bryan/GithubRepos/FCCEG-VimPresentation
+t/home/bryan/.local/share/vifm/Trash/000_JavaScriptTraining
+	/home/bryan/GithubRepos/JavaScriptTraining
+t/home/bryan/.local/share/vifm/Trash/000_clang
+	/home/bryan/GithubRepos/clang
+t/home/bryan/.local/share/vifm/Trash/000_voidrice
+	/home/bryan/GithubRepos/voidrice
+t/home/bryan/.local/share/vifm/Trash/000_emailAccountChanges.md
+	/home/bryan/GithubRepos/DisasterRecovery/emailAccountChanges.md
+t/home/bryan/.local/share/vifm/Trash/000_DisasterRecovery
+	/home/bryan/GithubRepos/DisasterRecovery
+t/home/bryan/.local/share/vifm/Trash/000_video-200123-2324-25.mkv
+	/home/bryan/video-200123-2324-25.mkv
+t/home/bryan/.local/share/vifm/Trash/000_runes.Rd
+	/home/bryan/runes.Rd
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-200124-0039-59.png
+	/home/bryan/pic-full-200124-0039-59.png
+t/home/bryan/.local/share/vifm/Trash/000_vimwikiUpdateVideo.mkv
+	/home/bryan/Youtube/vimwikiUpdateVideo.mkv
+t/home/bryan/.local/share/vifm/Trash/000_rscodeio-master.zip
+	/home/bryan/GithubRepos/rscodeio-master.zip
+t/home/bryan/.local/share/vifm/Trash/000_rscodeio-master
+	/home/bryan/GithubRepos/rscodeio-master
+t/home/bryan/.local/share/vifm/Trash/001_gruvboxr
+	/home/bryan/R/x86_64-pc-linux-gnu-library/3.6/gruvboxr
+t/home/bryan/.local/share/vifm/Trash/000_screencast-200211-1800-50.mkv
+	/home/bryan/screencast-200211-1800-50.mkv
+t/home/bryan/.local/share/vifm/Trash/000_Welcome! (Desktop)
+	/home/bryan/Welcome! (Desktop)
+t/home/bryan/.local/share/vifm/Trash/000__resources
+	/home/bryan/_resources
+t/home/bryan/.local/share/vifm/Trash/000_4._Tips___.pdf
+	/home/bryan/4._Tips___.pdf
+t/home/bryan/.local/share/vifm/Trash/000_test.py
+	/home/bryan/test.py
+t/home/bryan/.local/share/vifm/Trash/000_screencast-200216-1434-43.mkv
+	/home/bryan/screencast-200216-1434-43.mkv
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-200219-2008-53.png
+	/home/bryan/pic-full-200219-2008-53.png
+t/home/bryan/.local/share/vifm/Trash/000_export.csv
+	/home/bryan/export.csv
+t/home/bryan/.local/share/vifm/Trash/000_beginning_python,
+	/home/bryan/Research/python/info_videos/corey_schafer/beginning_python,
+t/home/bryan/.local/share/vifm/Trash/000_python}
+	/home/bryan/Research/python/info_videos/corey_schafer/python}
+t/home/bryan/.local/share/vifm/Trash/000_{python_OOP,
+	/home/bryan/Research/python/info_videos/corey_schafer/{python_OOP,
+t/home/bryan/.local/share/vifm/Trash/000_SimpylFold
+	/home/bryan/.config/nvim/plugged/SimpylFold
+t/home/bryan/.local/share/vifm/Trash/000_hex.png
+	/home/bryan/hex.png
+t/home/bryan/.local/share/vifm/Trash/000_roboto.Rmd
+	/home/bryan/R/roboto.Rmd
+t/home/bryan/.local/share/vifm/Trash/000_roboto.html
+	/home/bryan/R/roboto.html
+t/home/bryan/.local/share/vifm/Trash/000_roboto.pdf
+	/home/bryan/R/roboto.pdf
+t/home/bryan/.local/share/vifm/Trash/000_skeleton.bib
+	/home/bryan/R/skeleton.bib
+t/home/bryan/.local/share/vifm/Trash/000_EtsySoldOrders2019.csv
+	/home/bryan/R/etsyEDA/EtsySoldOrders2019.csv
+t/home/bryan/.local/share/vifm/Trash/000_install
+	/home/bryan/install
+t/home/bryan/.local/share/vifm/Trash/000_CodeSnippets
+	/home/bryan/GithubRepos/CodeSnippets
+t/home/bryan/.local/share/vifm/Trash/000_rust-lang
+	/home/bryan/GithubRepos/rust-lang
+t/home/bryan/.local/share/vifm/Trash/000_download.Rmd
+	/home/bryan/Downloads/download.Rmd
+t/home/bryan/.local/share/vifm/Trash/000_TODO.pdf
+	/home/bryan/TODO.pdf
+t/home/bryan/.local/share/vifm/Trash/000_pic-selected-200402-2157-47.png
+	/home/bryan/pic-selected-200402-2157-47.png
+t/home/bryan/.local/share/vifm/Trash/000_pic-selected-200402-2157-28.png
+	/home/bryan/pic-selected-200402-2157-28.png
+t/home/bryan/.local/share/vifm/Trash/000_packrat
+	/home/bryan/R/etsyEDA/packrat
+t/home/bryan/.local/share/vifm/Trash/000_pres-figure
+	/home/bryan/R/pres-figure
+t/home/bryan/.local/share/vifm/Trash/000_chunk-code-2044ad29ad7839.log
+	/home/bryan/R/chunk-code-2044ad29ad7839.log
+t/home/bryan/.local/share/vifm/Trash/000_testutf.Rmd
+	/home/bryan/R/testutf.Rmd
+t/home/bryan/.local/share/vifm/Trash/000_testutf.html
+	/home/bryan/R/testutf.html
+t/home/bryan/.local/share/vifm/Trash/000_20190703 Stats Class
+	/home/bryan/Research/20190703 Stats Class
+t/home/bryan/.local/share/vifm/Trash/000_20190703 Stats Class.zip
+	/home/bryan/Research/20190703 Stats Class.zip
+t/home/bryan/.local/share/vifm/Trash/000_Learn Data Science Tutorial - Full Course for Beginners-ua-CiDNNj30.mp4
+	/home/bryan/Research/statistics/Learn Data Science Tutorial - Full Course for Beginners-ua-CiDNNj30.mp4
+t/home/bryan/.local/share/vifm/Trash/000_20190621 Statistic for beginners _ Statistics for Data Science by Geek's Lesson.mp4
+	/home/bryan/Research/statistics/20190621 Statistic for beginners _ Statistics for Data Science by Geek's Lesson.mp4
+t/home/bryan/.local/share/vifm/Trash/000_Mendeley
+	/home/bryan/Documents/Mendeley
+t/home/bryan/.local/share/vifm/Trash/000_INBOX
+	/home/bryan/.local/share/mail/protonmail/INBOX
+t/home/bryan/.local/share/vifm/Trash/000_=
+	/home/bryan/=
+t/home/bryan/.local/share/vifm/Trash/000_Introduction To LaTeX-P5LjLU2Ik-E.mkv
+	/home/bryan/Introduction To LaTeX-P5LjLU2Ik-E.mkv
+t/home/bryan/.local/share/vifm/Trash/000_LaTeX Document Classes, Sections, and Outlining-jyeY-i_dsE8.f247.webm.part
+	/home/bryan/LaTeX Document Classes, Sections, and Outlining-jyeY-i_dsE8.f247.webm.part
+t/home/bryan/.local/share/vifm/Trash/000_LaTeX Document Classes, Sections, and Outlining-jyeY-i_dsE8.f247.webm.ytdl
+	/home/bryan/LaTeX Document Classes, Sections, and Outlining-jyeY-i_dsE8.f247.webm.ytdl
+t/home/bryan/.local/share/vifm/Trash/000_The Making of my First R Package {runes} - ᚱᚢᚾᛖᛋ-PJz9edTHCxg.m4a
+	/home/bryan/The Making of my First R Package {runes} - ᚱᚢᚾᛖᛋ-PJz9edTHCxg.m4a
+t/home/bryan/.local/share/vifm/Trash/000_The Making of my First R Package {runes} - ᚱᚢᚾᛖᛋ-PJz9edTHCxg.mkv
+	/home/bryan/The Making of my First R Package {runes} - ᚱᚢᚾᛖᛋ-PJz9edTHCxg.mkv
+t/home/bryan/.local/share/vifm/Trash/000_test1.md
+	/home/bryan/test1.md
+t/home/bryan/.local/share/vifm/Trash/000_test2.md
+	/home/bryan/test2.md
+t/home/bryan/.local/share/vifm/Trash/000_test3.md
+	/home/bryan/test3.md
+t/home/bryan/.local/share/vifm/Trash/002_mcdn.podbean.com
+	/home/bryan/Downloads/mcdn.podbean.com
+t/home/bryan/.local/share/vifm/Trash/000_pic-full-200505-1745-31.png
+	/home/bryan/pic-full-200505-1745-31.png
+t/home/bryan/.local/share/vifm/Trash/001_apple-touch-icon.png
+	/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM/apple-touch-icon.png
+t/home/bryan/.local/share/vifm/Trash/014_avatar.jpg
+	/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM/avatar.jpg
+t/home/bryan/.local/share/vifm/Trash/001_favicon-16x16.png
+	/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM/favicon-16x16.png
+t/home/bryan/.local/share/vifm/Trash/001_favicon-32x32.png
+	/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM/favicon-32x32.png
+t/home/bryan/.local/share/vifm/Trash/001_favicon.ico
+	/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM/favicon.ico
+t/home/bryan/.local/share/vifm/Trash/001_safari-pinned-tab.svg
+	/home/bryan/Downloads/onlyfans.com/Post - Onlyfans - 5-7-2020 8-43-02 AM/safari-pinned-tab.svg
+t/home/bryan/.local/share/vifm/Trash/004_onlyfans.com
+	/home/bryan/Downloads/onlyfans.com
+t/home/bryan/.local/share/vifm/Trash/000_addressbook
+	/home/bryan/.abook/addressbook
+t/home/bryan/.local/share/vifm/Trash/000_addressbook~
+	/home/bryan/.abook/addressbook~
+t/home/bryan/.local/share/vifm/Trash/000_abook
+	/home/bryan/.abook/abook

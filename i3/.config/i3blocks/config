@@ -1,0 +1,103 @@
+command=~/.local/bin/statusbar/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+#global font color
+color=#ebdbb2
+background=#282828
+
+#[archlogo]
+#command=echo ""
+#label=
+#color=#458588
+#interval=once
+
+[runez]
+interval=once
+
+[crypto]
+interval=once
+
+[youtubesubs]
+interval=30
+
+[record]
+command=cat /tmp/recordingicon
+interval=once
+signal=9
+
+[music]
+label=<span color="#1d2021"> </span>
+interval=once
+signal=11
+
+[news]
+label=<span color="#d65d0e"> </span>
+interval=once
+signal=6
+
+#[iplocate]
+#interval=30
+
+[pacpackages]
+label=<span color="#fabd2f"> </span>
+interval=once
+signal=8
+
+#[torrent]
+#interval=20
+#signal=7
+
+[weather]
+interval=18000
+signal=5
+
+[moonphase]
+interval=10
+
+[mailbox]
+label=<span color="#98971a"> </span>
+interval=180
+signal=12
+
+#[memory]
+#interval=30
+#label=<span color="#9d0006"> </span>
+
+[cpu]
+interval=15
+label=<span color="#98971a"> </span>
+
+[volume]
+interval=once
+signal=10
+
+#[disk]
+#interval=60
+#command=disk /
+
+[disk]
+interval=60
+label=<span color="#458588"> </span>
+command=disk /home | awk '{print $2}'
+
+[battery]
+command=battery BAT0
+interval=5
+
+[battery]
+command=battery BAT1
+interval=5
+
+[clock]
+label=<span color="#cc241d"> </span>
+interval=30
+
+#[networktraffic]
+#interval=1
+
+[internet]
+interval=10
+
+#[help]
+#interval=once

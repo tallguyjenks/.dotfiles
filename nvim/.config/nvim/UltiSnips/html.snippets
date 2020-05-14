@@ -1,0 +1,312 @@
+# =========================================================================== #
+# BOILER PLATE
+# =========================================================================== #
+snippet ! "boilerplate code"
+<!DOCTYPE HTML>
+<head>
+	<title>${1}</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="${2}.css"/>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+</head>
+${2}
+<html>
+<body>
+$0
+</body>
+</html>
+endsnippet
+# =========================================================================== #
+# COMMENT & SYMBOLS
+# =========================================================================== #
+snippet // "insert comment"
+<!-- ${1} -->$0
+endsnippet
+snippet -- "nice dash seperator"
+&ndash;
+endsnippet
+snippet & "ampersand"
+&amp;
+endsnippet
+# =========================================================================== #
+# TAG ATTRIBUTES
+# =========================================================================== #
+snippet . "add class to html element"
+class="${1}"
+endsnippet
+snippet # "Add ID to element"
+id="${1}"
+endsnippet
+snippet alt "add alternative text"
+alt="${1}"
+endsnippet
+snippet src "add src url to tag"
+src="${1}"
+endsnippet
+# =========================================================================== #
+# HYPERLINKS
+# =========================================================================== #
+snippet a "URL"
+<a target="_blank" href="${1}">${2}</a>$0
+endsnippet
+snippet a. "URL with class"
+<a class="${1}" target="_blank" href="${2}">${3}</a>$0
+endsnippet
+snippet a# "URL with ID"
+<a id="${1}" target="_blank" href="${2}">${3}</a>$0
+endsnippet
+snippet a:mail  "Email Address"
+<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>$0
+endsnippet
+# =========================================================================== #
+# IMAGES
+# =========================================================================== #
+snippet img
+<img src="${1}" alt="${2}">
+endsnippet
+snippet img.
+<img class="${1}" src="${2}" alt="${3}">
+endsnippet
+snippet img#
+<img id="${1}" src="${2}" alt="${3}">
+endsnippet
+# =========================================================================== #
+# LISTS
+# =========================================================================== #
+snippet ol
+<ol>
+	${1}
+</ol>
+$0
+endsnippet
+snippet ol.
+<ol class="${1}">
+	${2}
+</ol>
+$0
+endsnippet
+snippet ol#
+<ol id="${1}">
+	${2}
+</ol>
+$0
+endsnippet
+snippet ul
+<ul>
+	${1}
+</ul>
+$0
+endsnippet
+snippet ul.
+<ul class="${1}">
+	${2}
+</ul>
+$0
+endsnippet
+snippet ul#
+<ul id="${1}">
+	${2}
+</ul>
+$0
+endsnippet
+snippet li
+<li>${1}</li>$0
+endsnippet
+snippet li.
+<li class="${1}">${2}</li>$0
+endsnippet
+snippet li#
+<li id="${1}">${2}</li>$0
+endsnippet
+
+# =========================================================================== #
+# FONT FORMATTING
+# =========================================================================== #
+snippet b "bold text"
+<strong>${1}</strong> $0
+endsnippet
+snippet i "Emphasis / italics"
+<em>${1}</em> $0
+endsnippet
+snippet u "underline"
+<u>${1}</u> $0
+endsnippet
+snippet s "strike through"
+<s>${1}</s> $0
+endsnippet
+snippet sub
+<sub>${1}</sub> $0
+endsnippet
+snippet sup
+<sup>${1}</sup> $0
+endsnippet
+snippet br "line break"
+<br>
+$0
+endsnippet
+snippet hr "horizontal rule / a line"
+<hr>
+$0
+endsnippet
+snippet code "code formatting"
+<code>${1}</code> $0
+endsnippet
+# =========================================================================== #
+# CONTAINERS & STRUCTURE
+# =========================================================================== #
+snippet div "container"
+<div>
+	${1}
+</div>
+$0
+endsnippet
+snippet div. "div with a class"
+<div class="${1}">
+	${2}
+</div>
+$0
+endsnippet
+snippet div# "div with an ID"
+<div id="${1}">
+	${2}
+</div>
+$0
+endsnippet
+
+snippet h1
+<h1>${1}</h1> $0
+endsnippet
+snippet h1.
+<h1 class="${1}">${2}</h1> $0
+endsnippet
+snippet h1#
+<h1 id="${1}">${2}</h1> $0
+endsnippet
+snippet h2
+<h2>${1}</h2> $0
+endsnippet
+snippet h2.
+<h2 class="${1}">${2}</h2> $0
+endsnippet
+snippet h2#
+<h2 id="${1}">${2}</h2> $0
+endsnippet
+snippet h3
+<h3>${1}</h3> $0
+endsnippet
+snippet h3.
+<h3 class="${1}">${2}</h3> $0
+endsnippet
+snippet h3#
+<h3 id="${1}">${2}</h3> $0
+endsnippet
+snippet h4
+<h4>${1}</h4> $0
+endsnippet
+snippet h4.
+<h4 class="${1}">${2}</h4> $0
+endsnippet
+snippet h4#
+<h4 id="${1}">${2}</h4> $0
+endsnippet
+snippet h5
+<h5>${1}</h5> $0
+endsnippet
+snippet h5.
+<h5 class="${1}">${2}</h5> $0
+endsnippet
+snippet h5#
+<h5 id="${1}">${2}</h5> $0
+endsnippet
+snippet h6
+<h6>${1}</h6> $0
+endsnippet
+snippet h6.
+<h6 class="${1}">${2}</h6> $0
+endsnippet
+snippet h6#
+<h6 id="${1}">${2}</h6> $0
+endsnippet
+snippet p
+<p>${1}</p>$0
+endsnippet
+snippet p.
+<p class="${1}">${2}</p>$0
+endsnippet
+snippet p#
+<p id="${1}">${2}</p>$0
+endsnippet
+snippet span
+<span>${1}</span>$0
+endsnippet
+snippet span.
+<span class="${1}">${2}</span>$0
+endsnippet
+snippet span#
+<span id="${1}">${2}</span>$0
+endsnippet
+# =========================================================================== #
+# TABLES
+# =========================================================================== #
+snippet table
+<table>
+	${1}
+</table>
+$0
+endsnippet
+snippet table.
+<table class="${1}">
+	${2}
+</table>
+$0
+endsnippet
+snippet table#
+<table id="${1}">
+	${2}
+</table>
+$0
+endsnippet
+snippet tbody
+<tbody>
+	${1}
+</tbody>
+$0
+endsnippet
+snippet td
+<td>${1}</td>
+endsnippet
+snippet td.
+<td class="${1}">${2}</td>
+endsnippet
+snippet td#
+<td id="${1}">${2}</td>
+endsnippet
+snippet tr
+<tr>
+	${1}
+</tr>
+$0
+endsnippet
+snippet thead
+<thead>
+	${1}
+</thead>
+$0
+endsnippet
+snippet tfoot
+<tfoot>
+	${1}
+</tfoot>
+$0
+endsnippet
+snippet th
+<th>${1}</th> $0
+endsnippet
+snippet th.
+<th class="${1}">${2}</th> $0
+endsnippet
+snippet th#
+<th id="${1}">${2}</th> $0
+endsnippet

@@ -1,0 +1,2 @@
+# vim: filetype=sh
+alias cfv="nvim .config/nvim/init.vim"

@@ -1,0 +1,14 @@
+[database]
+path=/home/bryan/.local/share/mail
+[user]
+name=bryan jenks
+primary_email=bryanjenks@protonmail.com
+[new]
+tags=unread;inbox;
+ignore=
+[search]
+exclude_tags=deleted;spam;
+[maildir]
+synchronize_flags=true
+[crypto]
+gpg_path=gpg

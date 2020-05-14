@@ -1,0 +1,17 @@
+[Default Applications]
+x-scheme-handler/magnet=torrent.desktop;
+x-scheme-handler/mailto=mail.desktop;
+text/plain=text.desktop;
+text/x-shellscript=text.desktop;
+application/pdf=pdf.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/gif=img.desktop;
+application/rss+xml=rss.desktop
+x-scheme-handler/lbry=lbry.desktop
+x-scheme-handler/kite=kite-copilot.desktop
+
+[Added Associations]
+application/rss+xml=nvim.desktop;
+text/markdown=nvim.desktop;
+application/x-sh=nvim.desktop;

@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+import sys
+from argparse import ArgumentParser
+from lyricwikia import get_all_lyrics, __version__
+
+
+def main():
+    """Main method"""
+    parser = ArgumentParser(description='Get lyrics of a song from LyricWikia')
+    parser.add_argument('ARTIST', type=str, help='Artist name')
+    parser.add_argument('SONG', type=str, help='Song title')
+    parser.add_argument('--separator', default='\n', help='line separator')
+    parser.add_argument('--version', action='version', version=__version__)
+    args = parser.parse_args()
+
+    try:
+        for lyrics in get_all_lyrics(args.ARTIST, args.SONG, args.separator):
+            print(lyrics)
+    except Exception as e:
+        sys.exit('ERROR: %s' % str(e))
+
+
+if __name__ == '__main__':
+    main()
