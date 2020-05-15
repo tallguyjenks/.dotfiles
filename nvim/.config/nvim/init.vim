@@ -419,11 +419,11 @@ call plug#end()
     " ~~~~~ For cleaning lb blog entries
         autocmd FileType html nnoremap <leader>clean <Esc>Gd3kgg
     " ~~~~~ For code highlighting visually
-        autocmd FileType html vnoremap <leader>red xa<span style="color: #cc241d"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>orange xa<span style="color: #d79921"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>yellow xa<span style="color: #fabd2f"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>green xa<span style="color: #98971a"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>blue xa<span style="color: #458588"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>purple xa<span style="color: #b16286"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>teal xa<span style="color: #689d6a"></span><Esc>F<hpf>a
-        autocmd FileType html vnoremap <leader>white xa<span style="color: #evdvv2"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>red xa<span style="color: #cc241d;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>ora xa<span style="color: #d79921;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>yel xa<span style="color: #fabd2f;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>gre xa<span style="color: #98971a;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>blu xa<span style="color: #458588;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>pur xa<span style="color: #b16286;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>tea xa<span style="color: #689d6a;"></span><Esc>F<hpf>a
+        autocmd FileType html vnoremap <leader>whi xa<span style="color: #evdvv2;"></span><Esc>F<hpf>a
