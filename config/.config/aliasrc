@@ -29,7 +29,7 @@ alias ka="killall" \
 
 # General aliasing
 alias bib="nvim $HOME/Research/bib/mega.bib" \
-	cat="bat" \
+	cat='bat --theme="Solarized (dark)"' \
 	ga="git add" \
 	gc="git commit" \
 	gp="git push" \
@@ -41,13 +41,26 @@ alias bib="nvim $HOME/Research/bib/mega.bib" \
 	py=bpython \
 	python=bpython \
 	scim=sc-im \
-	vifm="vu"
+	rm=trash-put
 
 # My task warrior scripting
-alias t="task list"
+alias t="task list" \
+	report="task burndown.daily"
 
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
 
 vf() { cd $HOME/VimWiki && fzf --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' | xargs -r -I % $EDITOR % ;}
 vff() { fzf --multi --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' --marker="~" | xargs -r -I % $EDITOR % ;}
+
+codi() {
+  local syntax="${1:-python}"
+  shift
+  nvim -c \
+    "let g:startify_disable_at_vimenter = 1 |\
+    set bt=nofile ls=0 noru nonu nornu |\
+    hi ColorColumn ctermbg=NONE |\
+    hi VertSplit ctermbg=NONE |\
+    hi NonText ctermfg=0 |\
+    Codi $syntax" "$@"
+}
 

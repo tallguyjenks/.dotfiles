@@ -26,6 +26,9 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Use Vimwiki
             Plug 'lervag/vimtex' " LaTeX Line Compiling?
             Plug 'vim-scripts/AutoComplPop' " Sensible Autocompletion
+            Plug 'easymotion/vim-easymotion' " Easy Movement
+            Plug 'ChristianChiarulli/codi.vim' " Interactive virtual text
+            Plug 'KKPMW/vim-sendtowindow' " Sending code to terminal in vim (uses <space>hjkl)
         "{{{ AESTHETICS }}}
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
@@ -40,6 +43,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'vim-pandoc/vim-pandoc' " RMarkdown Docs in Vim
             Plug 'vim-pandoc/vim-pandoc-syntax' " RMarkdown Docs in Vim
         "{{{ SYNTAX HIGHLIGHTING }}}
+            Plug 'ap/vim-css-color' " Visual display hexcode colors in vim
             Plug 'PotatoesMaster/i3-vim-syntax' " i3 Config Syntax highlighting
             Plug 'kovetskiy/sxhkd-vim' " sxhkd Config file syntax highlighting
             Plug 'tpope/vim-markdown' " T-Pope / For markdown fenced langs syntax highlighting
@@ -51,15 +55,33 @@ call plug#begin('~/.config/nvim/plugged')
             "Plug 'morhetz/gruvbox' " Because Gruvbox
             "Plug 'nathanaelkane/vim-indent-guides' " Indentation guides
             "Plug 'rust-lang/rust.vim' " Full Rust language support
-            "Plug 'KKPMW/vim-sendtowindow' " Sending code to terminal in vim (uses <space>hjkl)
-            Plug 'ap/vim-css-color' " Visual display hexcode colors in vim
     " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 call plug#end()
+
+"=================================="
+"               CODI               "
+"=================================="
+    " ~~~~~ Change the color
+        highlight CodiVirtualText ctermfg=Green
+        highlight CodiVirtualText ctermbg=Black
+        let g:codi#virtual_text_prefix = "❯ "
 "=================================="
 "             LEADER               "
 "=================================="
         " ~~~~~ Set Leader Character
                 let mapleader =","
+"=================================="
+"           EASY MOTION            "
+"=================================="
+        " ~~~~~ Map easy motion to search
+                nmap f <Plug>(easymotion-overwin-f2)
+                " NO Need for these with relative lines
+                "map / <Plug>(easymotion-bd-jk)
+                "nmap / <Plug>(easymotion-overwin-line)
+                map  <leader>/ <Plug>(easymotion-bd-w)
+                nmap <leader>/ <Plug>(easymotion-overwin-w)
+        " ~~~~~ Make sure <leader><leader> isnt remapped
+                let g:EasyMotion_do_mapping = 0
 "=================================="
 "             EMOJI                "
 "=================================="
@@ -73,12 +95,10 @@ call plug#end()
 "=================================="
         " ~~~~~ Select the complete menu item like CTRL+y would.
             inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
-
         " ~~~~~ Cancel the complete menu item like CTRL+e would.
             inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
-
         " ~~~~~ Emoji autocompletion
-            set completefunc=emoji#complete
+            "set completefunc=emoji#complete
 "=================================="
 "             SNIPPETS             "
 "=================================="
@@ -127,8 +147,9 @@ call plug#end()
         " ~~~~~ Make tab go to the matching pair item
                 "nnoremap <Tab> %
         " ~~~~~ Make sure wrapped lines are traversed in a non-dumb way
-                nmap j gj
-                nmap k gk
+                " This causes aberrant behavior when traversing even in macros
+                "nmap j gj
+                "nmap k gk
         " ~~~~~ Make inner change text motions extendeded (*nixcasts)
                 let items = [ "<bar>", "\\", "/", ":", ".", "*", "_" ]
                 for item in items
@@ -188,14 +209,14 @@ call plug#end()
                 set nocompatible " Dont worry about VI compatability, do yo thang
                 set encoding=utf-8 " Use an encoding that supports unicode.
                 set fileencoding=utf-8 " Set file encoding
-                set number relativenumber " line numbers and relative line numbers
+                "set number relativenumber " line numbers and relative line numbers
                 set tabstop=4 " The width of a TAB is set to 4.
                 set shiftwidth=4 " Indents will have a width of 4
                 set softtabstop=4 " Sets the number of columns for a TAB
                 set expandtab " Expand TABs to spaces
                 set wildmode=longest,list,full " Enable autocompletion:
                 set autoindent " New lines inherit indentation of preceding lines
-                set scrolloff=10 " keep at least 5 lines above/below
+                set scrolloff=999 " keep cursor in middle of screen at all times
                 set ignorecase " search ignoring case
                 "set cursorline " show me what line im on
                 filetype plugin on " File type detection
@@ -207,7 +228,7 @@ call plug#end()
                 highlight ColorColumn ctermbg=grey
                 call matchadd('ColorColumn','\%81v',100)
         " ~~~~~ Highlight white space and tab characters
-                exec "set listchars=tab:\u00B7\u00B7,trail:\u2423,nbsp:~"
+                exec "set listchars=tab:\u00B7\u00B7,trail:\u2423,eol:¬,nbsp:~"
                 set list
         " ~~~~~ Highlight trailing whitespace with RED
                 autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
@@ -253,8 +274,6 @@ call plug#end()
                 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
                 autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
                 autocmd BufRead,BufNewFile *.tex set filetype=tex
-
-                "autocmd Filetype Rmd inoremap <tab> <Esc>:UltiSnipsExpandTrigger<CR>
 "=================================="
 "           LimeLight              "
 "=================================="
@@ -278,7 +297,7 @@ call plug#end()
                 let g:limelight_priority = -1
         " ~~~~~ Integration with goyo
                 autocmd! User GoyoEnter Limelight
-                autocmd! User GoyoLeave Limelight!
+                autocmd! User GoyoLeave Limelight! \| set bg=light
 "=================================="
 "           File Explorer          "
 "=================================="
@@ -335,6 +354,7 @@ call plug#end()
             \{'path': '~/VimWiki/spirituality', 'syntax': 'markdown', 'ext':'.md'},
             \{'path': '~/VimWiki/tech', 'syntax': 'markdown', 'ext':'.md'},
             \{'path': '~/VimWiki/tech/linux', 'syntax': 'markdown', 'ext':'.md'},
+            \{'path': '~/VimWiki/tech/c', 'syntax': 'markdown', 'ext':'.md'},
             \{'path': '~/VimWiki/tech/css', 'syntax': 'markdown', 'ext':'.md'},
             \{'path': '~/VimWiki/tech/bash', 'syntax': 'markdown', 'ext':'.md'},
             \{'path': '~/VimWiki/tech/html', 'syntax': 'markdown', 'ext':'.md'},
@@ -372,26 +392,26 @@ call plug#end()
 "        LaTeX Code Snips          "
 "=================================="
         " ~~~~~ Word count:
-                autocmd FileType tex map ,w :w !detex \| wc -w<CR>
+                autocmd FileType tex map <leader>w :w !detex \| wc -w<CR>
         " ~~~~~ Make the autocompiler from vimtex open in zathura
                 let g:vimtex_view_method = 'zathura'
 "=================================="
 "       Markdown Code Snips        "
 "=================================="
-        autocmd Filetype [rR]md,markdown inoremap <leader>s ~~~~<Space><++><Esc>F~hi
-        autocmd Filetype [rR]md,markdown inoremap $ $$<Space><++><Esc>F$i
-        autocmd Filetype [rR]md,markdown map <leader>w yiWi[<Esc>Ea](<Esc>pa)
-        autocmd Filetype [rR]md,markdown inoremap <leader>n ---<CR><CR>
-        autocmd Filetype [rR]md,markdown inoremap <leader>b ****<Space><++><Esc>F*hi
-        autocmd Filetype [rR]md,markdown inoremap <leader>i __<Space><++><Esc>F_i
-        autocmd Filetype [rR]md,markdown inoremap <leader>fn ^[]<Space><++><Esc>F[a
-        autocmd Filetype [rR]md,markdown inoremap <leader>l [](<++>)<++><Esc>F[a
-        autocmd Filetype [rR]md,markdown inoremap <leader>1 #<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype [rR]md,markdown inoremap <leader>2 ##<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype [rR]md,markdown inoremap <leader>3 ###<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype [rR]md,markdown inoremap <leader>4 ####<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype [rR]md,markdown inoremap <leader>5 #####<Space><CR><CR><++><Esc>2kA
-        autocmd Filetype [rR]md,markdown inoremap <leader>6 ######<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>s ~~~~<Space><++><Esc>F~hi
+        autocmd Filetype [rR]md,markdown,md inoremap $ $$<Space><++><Esc>F$i
+        autocmd Filetype [rR]md,markdown,md map <leader>w yiWi[<Esc>Ea](<Esc>pa)
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>n ---<CR><CR>
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>b ****<Space><++><Esc>F*hi
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>i __<Space><++><Esc>F_i
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>fn ^[]<Space><++><Esc>F[a
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>l [](<++>)<++><Esc>F[a
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>1 #<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>2 ##<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>3 ###<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>4 ####<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>5 #####<Space><CR><CR><++><Esc>2kA
+        autocmd Filetype [rR]md,markdown,md inoremap <leader>6 ######<Space><CR><CR><++><Esc>2kA
         autocmd Filetype [rR]md inoremap <leader>r ```{r}<CR>```<CR><CR><++><Esc>2kO
         autocmd Filetype [rR]md inoremap <leader>p `r knitr::include_graphics("")`<Space><++><Esc>F"i
         autocmd Filetype [rR]md inoremap <leader>sub ~~<Space><++><Esc>F~i
@@ -403,6 +423,7 @@ call plug#end()
                                 autocmd FileType markdown inoremap <leader>diary #<Space><++><CR><CR><++><CR><CR>##<Space>DevLog<CR><CR><++><CR><CR><Esc>gg
                         " ~~~~~ This is for a vim wiki note template
                                 autocmd Filetype markdown inoremap <leader>note #<Space>Explain<CR><CR><CR><CR>#<Space>Documentation<CR><CR><++><CR><CR>#<Space>Code<CR><CR>```<++><CR><CR>#<Space> Documentation<CR><++><CR><CR>```<CR><CR><Esc>gg2ji
+                                autocmd Filetype markdown inoremap <leader>cnote #<Space>Explain<CR><CR><CR><CR>#<Space>Documentation<CR><CR><++><CR><CR>#<Space>Code<CR><CR>```c<CR><CR>//<Space> Documentation<CR><++><CR><CR>```<CR><CR><Esc>gg2ji
                                 autocmd Filetype markdown inoremap <leader>shnote #<Space>Explain<CR><CR><CR><CR>```sh<CR><CR><++><CR><CR>```<CR><CR>#<Space>Documentation<CR><CR><++><CR><CR><Esc>gg2ji
                                 autocmd Filetype markdown inoremap <leader>sh ```sh<CR><CR><CR><CR>```<Esc>2ki
                         " ~~~~~ This inputs a NOW() timestamp
@@ -412,7 +433,7 @@ call plug#end()
                 "           R Development          "
                 "=================================="
                         " ~~~~~ Open terminal in split for R analysis
-                                autocmd FileType *.R,*.Rmd, nnoremap <leader>t :vsp<CR>:terminal<CR>aR<CR>
+                                autocmd FileType r,R,Rmd nnoremap <leader>t :vsp<CR>:terminal<CR>aR<CR>
 "=================================="
 "           HTML SNIPPETS          "
 "=================================="

@@ -53,4 +53,3 @@ esac
 
 #printpricesr
 printf "<span color='#d79921'></span>\n"
-#

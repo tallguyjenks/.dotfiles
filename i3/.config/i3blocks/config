@@ -6,6 +6,11 @@ markup=pango
 color=#ebdbb2
 background=#282828
 
+[record]
+command=cat /tmp/recordingicon
+interval=once
+signal=9
+
 #[archlogo]
 #command=echo ""
 #label=
@@ -20,11 +25,6 @@ interval=once
 
 [youtubesubs]
 interval=30
-
-[record]
-command=cat /tmp/recordingicon
-interval=once
-signal=9
 
 [music]
 label=<span color="#1d2021"> </span>
@@ -52,11 +52,11 @@ signal=8
 interval=18000
 signal=5
 
-[moonphase]
-interval=10
+#[moonphase]
+#interval=10
 
 [mailbox]
-label=<span color="#98971a"> </span>
+label=<span color="#cc241d"> </span>
 interval=180
 signal=12
 
@@ -66,7 +66,7 @@ signal=12
 
 [cpu]
 interval=15
-label=<span color="#98971a"> </span>
+label=<span color="#d65d0e"> </span>
 
 [volume]
 interval=once
@@ -89,15 +89,15 @@ interval=5
 command=battery BAT1
 interval=5
 
+[internet]
+interval=10
+
 [clock]
 label=<span color="#cc241d"> </span>
 interval=30
 
 #[networktraffic]
 #interval=1
-
-[internet]
-interval=10
 
 #[help]
 #interval=once

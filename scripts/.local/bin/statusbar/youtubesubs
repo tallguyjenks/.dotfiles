@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-SUBS="$(curl -s https://www.youtube.com/channel/UCfhSB16X9MXhzSFe_H7XbHg | grep -i "subscribers" | awk -F\> '{print $19}' | awk -F\< '{print $1}'
+SUBS="$(curl -s https://www.youtube.com/channel/UCfhSB16X9MXhzSFe_H7XbHg | awk -F\> '/subscribers/ {print $19}' | awk -F\< '{print $1}'
 )"
 
-BIZSUBS="$(curl -s https://www.youtube.com/channel/UCT5iV67PHRN6oWLAuifQu5g | grep -i "subscribers" | awk -F\> '{print $19}' | awk -F\< '{print $1}'
+BIZSUBS="$(curl -s https://www.youtube.com/channel/UCT5iV67PHRN6oWLAuifQu5g | awk -F\> '/subscribers/ {print $19}' | awk -F\< '{print $1}'
 )"
 
 printf -v MSG "<span color='#d65d0e'> </span>%s <span color='#d79921'> </span>%s" "$SUBS" "$BIZSUBS"

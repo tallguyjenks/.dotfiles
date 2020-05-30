@@ -2,16 +2,23 @@
 
 case $BLOCK_BUTTON in
 	1) $TERMINAL -e nmtui ;;
+    2) pgrep -x dunst >/dev/null && notify-send "Your Connection Strength:" $(grep "^\s*w" /proc/net/wireless | awk '{print int($3 * 100 / 70)"%"}') ;;
 	3) pgrep -x dunst >/dev/null && notify-send " Internet module" "\- Click to connect
-: no wifi connection
-: wifi connection with quality
-X: no ethernet
- : ethernet working
+: wifi darker color = greater signal
+: no Internet
+ : ethernet
 " ;;
 esac
 
-[ "$(cat /sys/class/net/w*/operstate)" = 'down' ] && wifiicon="<span color='#928374'></span>"
+signal=$(grep "^\s*w" /proc/net/wireless | awk '{ print int($3 * 100 / 70)}')
 
-[ ! -n "${wifiicon+var}" ] && wifiicon=$(grep "^\s*w" /proc/net/wireless | awk '{ print "\<span color\=\"\#458588\"\>\<\/span\>", int($3 * 100 / 70) "%" }')
+[ "$(cat /sys/class/net/w*/operstate)" = "down" ] && wifiicon="<span color='#928374'></span>"
+if [ "$(cat /sys/class/net/e*/operstate)" = "up" ]; then
+    wifiicon="<span color='#689d6a'></span>"
+elif [ "$(cat /sys/class/net/w*/operstate)" = "up" ]; then
+    [ $signal -gt 25 ] && wifiicon="<span color='#83a598'></span>"
+    [ $signal -gt 50 ] && wifiicon="<span color='#458588'></span>"
+    [ $signal -gt 75 ] && wifiicon="<span color='#076678'></span>"
+fi
 
-printf "%s %s \n" "$wifiicon" "$(cat /sys/class/net/e*/operstate | sed "s/down/\<span color\=\'\#cc241d\'\>X\<\/span\>/;s/up//")"
+printf "%s\n" "$wifiicon"

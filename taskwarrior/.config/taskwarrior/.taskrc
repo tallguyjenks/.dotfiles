@@ -30,7 +30,11 @@ include /usr/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
 
 # Define the contexts i have
-context.business=project:business
-context.personal=project:personal
-context.tech=project:tech
-context.faire=project:faire
+
+context.biz=+leather
+context.yt=+yt
+context.faire=+faire
+context.github=+github
+context.home=-leather and -faire and -vim and -linux and -c and -r and -bash and -github and -yt and -research
+context.research=+research
+context.tech=+vim or +linux or +c or +r or +bash

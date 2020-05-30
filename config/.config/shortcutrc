@@ -1,2 +1,3 @@
 # vim: filetype=sh
 alias cfv="nvim .dotfiles/nvim/.config/nvim/init.vim"
+alias mn="cd /mnt"
