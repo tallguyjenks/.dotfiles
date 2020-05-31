@@ -1,0 +1,223 @@
+#!/usr/bin/env bash
+
+# Dependencies:
+#    fzf: https://github.com/junegunn/fzf
+#   glow: https://github.com/charmbracelet/glow
+
+# The file where the data is stored
+data_file="$HOME/training.csv"
+
+monday(){
+    clear
+    echo "# Monday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|Pushups|3|5-10|2:00|
+|||||
+|KettleBell Rows|3|6-8|2:00|
+|Dip Shrugs|2|4-8|2:00|
+|||||
+|Scap Pushups|2|4-8|1:00|
+|Bridge|2|30s|1:00|
+|||||
+|Ladder Sets|3|7,5,3|1:00|
+|||||
+|Wall Slides|2|4-6|1:00|
+|||||
+|Stretch||||
+|||||
+|Night Walk||||" > "$tmpfile"
+}
+tuesday(){
+clear
+echo "# Tuesday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|Pistol Squat|2-4|6-12|2:00|
+|Glute Ham Raise - Hinge|2-3|6-12|1:30|
+|Wall Squat|2-3|30-60s|1:00-1:30|
+|Calf Raise - Double Leg|2-3|10-30|1:00-1:30|
+|Bent Leg Calf Raise|2-3|10-20|1:00-1:30|
+|||||
+|Night Walk||||" > "$tmpfile"
+}
+wednesday(){
+    clear
+    echo "# Wednesday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|(N) Pushups|3|3-6|2:00|
+|||||
+|KettleBell Rows|3|6-8|2:00|
+|Dip Shrugs|2|4-8|2:00|
+|||||
+|Scap Pushups|2|4-8|1:00|
+|Bridge|2|30s|1:00|
+|||||
+|Ladder Sets|3|7,5,3|1:00|
+|||||
+|Wall Slides|2|4-6|1:00|
+|||||
+|Stretch||||
+|||||
+|Night Walk||||" > "$tmpfile"
+}
+thursday(){
+clear
+echo "# Thursday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|Pistol Squat|2-4|6-12|2:00|
+|Glute Ham Raise - Hinge|2-3|6-12|1:30|
+|Wall Squat|2-3|30-60s|1:00-1:30|
+|Calf Raise - Double Leg|2-3|10-30|1:00-1:30|
+|Bent Leg Calf Raise|2-3|10-20|1:00-1:30|
+|||||
+|Night Walk||||" > "$tmpfile"
+}
+friday(){
+    clear
+    echo "# Friday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|Pushups|3|5-10|2:00|
+|||||
+|KettleBell Rows|3|6-8|2:00|
+|Dip Shrugs|2|4-8|2:00|
+|||||
+|Scap Pushups|2|4-8|1:00|
+|Bridge|2|30s|1:00|
+|||||
+|Ladder Sets|3|7,5,3|1:00|
+|||||
+|Wall Slides|2|4-6|1:00|
+|||||
+|Stretch||||
+|||||
+|Night Walk||||" > "$tmpfile"
+}
+saturday(){
+    clear
+    echo "# Saturday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|Fast||||
+|Run|1|5km?||
+|||||
+|or||||
+|||||
+|Fast||||
+|Hike||||
+" > "$tmpfile"
+}
+sunday(){
+clear
+echo "# Sunday
+|Exercise|Sets|Reps|Rest|
+|--------|:--:|:--:|:--:|
+|REST||||" > "$tmpfile"
+}
+
+# Current Training Plan
+training_plan(){
+    tmpfile=$(mktemp /tmp/workoutentry-script.XXXXXX)
+    case "$OPTARG" in
+        [mM]) monday ;;
+        [tT]) tuesday  ;;
+        [wW]) wednesday ;;
+          th) thursday ;;
+        [fF]) friday ;;
+          s) saturday ;;
+          su) sunday ;;
+          *) printf "\nOptions are 'm|t|w|th|f|s|su'\n\n" && exit 1  ;;
+    esac
+    glow "$tmpfile"
+    rm "$tmpfile"
+    exit 0
+}
+
+
+# get HELP
+print_usage(){
+    printf "\n[Date]\t\t\t[Exercise]\t[Set#]\t[Reps_Numerator]\t[Reps_Denominator]\n"
+    printf "[YYYY-MM-DD]\t[str]\t\t[#]\t\t[#]\t\t\t\t\t[#]\n\n"
+}
+
+# create a new entry from scratch (mostly for back dating)
+new_exercise(){
+    clear
+    echo "Use todays date? [Y/N]"
+    read -r response
+    clear
+    case "$response" in
+        [yY]) iso_date=$(date --rfc-3339=seconds | awk '{print $1}') ;;
+        [nN]) clear && echo "What date: 'YYYY-MM-DD'" && read -r iso_date ;;
+        *)  ;;
+    esac
+    echo "Enter the name of your exercise:"
+    read -r exercise
+    clear
+    echo "Set Number?"
+    read -r set_number
+    clear
+    echo "Reps you completed?"
+    read -r reps_numerator
+    clear
+    echo "Reps you aimed for?"
+    read -r reps_denominator
+    clear
+    echo "$iso_date,$exercise,$set_number,$reps_numerator,$reps_denominator" >> "$data_file"
+}
+
+# The auto entry upon scripts calling
+entry(){
+    clear
+    echo "Use todays date? [Y/N]"
+    read -r response
+    clear
+    case "$response" in
+        [yY]) iso_date=$(date --rfc-3339=seconds | awk '{print $1}') ;;
+        [nN]) clear && echo "What date: 'YYYY-MM-DD'" && read -r iso_date ;;
+        *)  ;;
+    esac
+    # Get exercise list
+    exercise=$(tail -n +2 "$data_file" | awk -F, '{print $2}' | uniq | fzf --prompt="Exercise: ")
+    clear
+    echo "Set Number?"
+    read -r set_number
+    clear
+    echo "Reps you completed?"
+    read -r reps_numerator
+    clear
+    echo "Reps you aimed for?"
+    read -r reps_denominator
+    clear
+}
+
+# Input new data into CSV
+push_entry(){
+    echo "$iso_date,$exercise,$set_number,$reps_numerator,$reps_denominator" >> "$data_file"
+}
+
+# flags to call functions
+while getopts 'hnep:' flag; do
+  case "${flag}" in
+    h) print_usage && exit 0 ;;
+    n) new_exercise && exit 0 ;;
+    e) entry && push_entry && exit 0 ;;
+    p) training_plan && exit 0 ;;
+    *) print_usage && exit 1 ;;
+  esac
+done
+
+clear
+print_usage
+
+echo "h) print_usage
+n) new_exercise
+e) entry && push_entry
+p) training_plan
+*) print_usage"
+
+exit 0
+

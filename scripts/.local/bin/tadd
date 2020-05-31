@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Get the project for the task
+project=$(task _unique project | fzf --prompt="Project: ")
+clear
+
+# Get count of tags user would like to add
+echo "How Many Tags To Add? "
+read -r tag_count
+tags=""
+clear
+
+# Loop through task lists to get tag choices from user
+for ((i=0;i<tag_count;i++)); do
+    count=$((i+1))
+    add=$(task _unique tags | fzf --prompt="Tag #$count: ")
+    if [ -n "$add" ]; then
+        tags="$tags +$add"
+    fi
+done
+
+# Get the name of the task
+echo "What is the name of this task?"
+read -r task_name
+clear
+
+# Putting it all together
+printf -v create "project:%s %s %s\n" "$project" "$tags" "$task_name"
+task add $(echo "$create")

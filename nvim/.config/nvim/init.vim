@@ -209,7 +209,7 @@ call plug#end()
                 set nocompatible " Dont worry about VI compatability, do yo thang
                 set encoding=utf-8 " Use an encoding that supports unicode.
                 set fileencoding=utf-8 " Set file encoding
-                "set number relativenumber " line numbers and relative line numbers
+                set number relativenumber " line numbers and relative line numbers
                 set tabstop=4 " The width of a TAB is set to 4.
                 set shiftwidth=4 " Indents will have a width of 4
                 set softtabstop=4 " Sets the number of columns for a TAB

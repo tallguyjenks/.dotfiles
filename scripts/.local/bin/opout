@@ -5,7 +5,7 @@
 basename="$(echo "$1" | sed 's/\.[^\/.]*$//')"
 
 case "$1" in
-	*.tex|*.md|*.[rR]md|*.ms|*.me|*.mom) setsid "$READER" "$basename".pdf >/dev/null 2>&1 & ;;
-	*.html) setsid "$BROWSER" --new-window "$basename".html >/dev/null 2>&1 & ;;
-	*.sent) setsid sent "$1" >/dev/null 2>&1 & ;;
+	*.tex|*.md|*.[rR]md|*.ms|*.me|*.mom) setsid -f "$READER" "$basename".pdf >/dev/null 2>&1 & ;;
+	*.html) setsid -f "$BROWSER" --new-window "$basename".html >/dev/null 2>&1 ;;
+	*.sent) setsid -f sent "$1" >/dev/null 2>&1 ;;
 esac
