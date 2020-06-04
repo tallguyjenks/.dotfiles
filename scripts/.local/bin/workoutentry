@@ -146,14 +146,7 @@ print_usage(){
 # create a new entry from scratch (mostly for back dating)
 new_exercise(){
     clear
-    echo "Use todays date? [Y/N]"
-    read -r response
-    clear
-    case "$response" in
-        [yY]) iso_date=$(date --rfc-3339=seconds | awk '{print $1}') ;;
-        [nN]) clear && echo "What date: 'YYYY-MM-DD'" && read -r iso_date ;;
-        *)  ;;
-    esac
+    iso_date=$(date --rfc-3339=seconds | awk '{print $1}')
     echo "Enter the name of your exercise:"
     read -r exercise
     clear
@@ -172,14 +165,7 @@ new_exercise(){
 # The auto entry upon scripts calling
 entry(){
     clear
-    echo "Use todays date? [Y/N]"
-    read -r response
-    clear
-    case "$response" in
-        [yY]) iso_date=$(date --rfc-3339=seconds | awk '{print $1}') ;;
-        [nN]) clear && echo "What date: 'YYYY-MM-DD'" && read -r iso_date ;;
-        *)  ;;
-    esac
+    iso_date=$(date --rfc-3339=seconds | awk '{print $1}')
     # Get exercise list
     exercise=$(tail -n +2 "$data_file" | awk -F, '{print $2}' | uniq | fzf --prompt="Exercise: ")
     clear

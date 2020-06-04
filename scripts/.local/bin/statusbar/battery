@@ -10,39 +10,46 @@ case $BLOCK_BUTTON in
 - Text color reflects charge left" ;;
 esac
 
-capacity=$(cat /sys/class/power_supply/"$1"/capacity) || exit 1
-status=$(cat /sys/class/power_supply/"$1"/status)
+# Get current battery capacity/status from stdin or default BAT0
+battery=/sys/class/power_supply/${1:-BAT0}
+read -r capacity <"$battery/capacity"
+read -r status   <"$battery/status"
 
+# Set the color based on capacity
 if [ "$capacity" -ge 85 ]; then
-	color="#689d6a"
+    color="#689d6a"
 elif [ "$capacity" -ge 65 ]; then
-	color="#fabd2f"
+    color="#fabd2f"
 elif [ "$capacity" -ge 50 ]; then
-	color="#d79921"
+    color="#d79921"
 elif [ "$capacity" -ge 25 ]; then
-	color="#d65d0e"
+    color="#d65d0e"
 elif [ "$capacity" -ge 10 ]; then
-	color="#cc241d"
+    color="#cc241d"
 else
-	color="#fb4934"
-	warn=" "
+    color="#fb4934"
+    warn=" "
 fi
 
-[ -z "$warn" ] && warn=""
+#status="${status//,/}"
+status="${status/#Discharging/}"
+status="${status/#Not Charging/}"
+status="${status/#Charging/}"
+status="${status/#Unknown/}"
+status="${status/#Full/}"
+status="${status} "
 
-[ "$status" = "Charging" ] && [ -n "$warn" ] && warn=""
+# If battery below 10 but is now charging remove warning 
+[ "$status" = "Charging" ] && warn=""
+
+# If discharging and capacity below 10 then remove status  and replace with warning 
 [ "$status" = "Discharging" ] && [ -n "$warn" ] && status=""
-[ "$capacity" = 0 ] && [ "$status" = "Unknown" ] && [ -n "$warn" ] && status=" " && warn=""
 
-printf "<span color='%s'>%s%s%s</span>\n" "$color" "$(echo "$status" | sed -e \
-    "s/,//; \
-    s/Discharging/ / \
-    ;s/Not Charging/ / \
-    ;s/Charging/ / \
-    ;s/Unknown/ / \
-    ;s/Full/ / \
-    ;s/ 0*/ /g \
-    ;s/ :/ /g")" "$warn" "$(echo "$capacity" | sed -e 's/$/%/')"
+# if capacity is 0 and battery is not charging then change icon to empty battery and turn off warning
+[ "$capacity" = 0 ] && [ "$status" = "Unknown" ] && status=" " && warn=""
+
+# Put it all together
+printf "<span color='%s'>%s%s%s</span>\n" "$color" "$status" "$warn" "$capacity%"
 
 
 
