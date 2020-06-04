@@ -19,11 +19,22 @@ for ((i=0;i<tag_count;i++)); do
     fi
 done
 
+# Get duedate if ther is one
+echo "What is the due date? Today? [Y/N]"
+read -r due_response
+
+case "$due_response" in
+    [yY]) duedate=$(date --rfc-3339=seconds | awk '{print $1}') ;;
+    [nN]) clear && echo "Enter date as 'YYYY-MM-DD or +#[ymd]'" && read -r duedate ;;
+    *) duedate="" ;;
+esac
+clear
+
 # Get the name of the task
 echo "What is the name of this task?"
 read -r task_name
 clear
 
 # Putting it all together
-printf -v create "project:%s %s %s\n" "$project" "$tags" "$task_name"
+printf -v create "project:%s %s due:%s %s\n" "$project" "$tags" "$duedate" "$task_name"
 task add $(echo "$create")
