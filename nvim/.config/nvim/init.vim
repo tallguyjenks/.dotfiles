@@ -29,6 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'easymotion/vim-easymotion' " Easy Movement
             Plug 'ChristianChiarulli/codi.vim' " Interactive virtual text
             Plug 'KKPMW/vim-sendtowindow' " Sending code to terminal in vim (uses <space>hjkl)
+            Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
         "{{{ AESTHETICS }}}
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
@@ -52,7 +53,7 @@ call plug#begin('~/.config/nvim/plugged')
             "Plug 'terryma/vim-multiple-cursors' " Multi-cursor functionality
             "Plug 'mhinz/vim-startify' " Start screen for vim / Doesnt Work with VimWiki
             "Plug 'arcticicestudio/nord-vim' " Nord Color Scheme
-            "Plug 'morhetz/gruvbox' " Because Gruvbox
+            "Plug 'gruvbox-community/gruvbox' " Because Gruvbox
             "Plug 'nathanaelkane/vim-indent-guides' " Indentation guides
             "Plug 'rust-lang/rust.vim' " Full Rust language support
     " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ "
