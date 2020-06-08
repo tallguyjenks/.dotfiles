@@ -34,6 +34,8 @@ alias bib="nvim $HOME/Research/bib/mega.bib" \
 	gc="git commit" \
 	gp="git push" \
 	gs="git status" \
+	rm="rm -I" \
+	cp="cp -r" \
 	grep=rg \
 	h="cd $HOME && taskell" \
 	ls=lsd \
@@ -41,7 +43,8 @@ alias bib="nvim $HOME/Research/bib/mega.bib" \
 	py=bpython \
 	python=bpython \
 	scim=sc-im \
-	rm=trash-put
+	rm=trash-put \
+	fzf="fzf --border"
 
 # My task warrior scripting
 alias t="task list" \
@@ -49,8 +52,8 @@ alias t="task list" \
 
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
 
-vf() { cd $HOME/VimWiki && fzf --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' | xargs -r -I % $EDITOR % ;}
-vff() { fzf --multi --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' --marker="~" | xargs -r -I % $EDITOR % ;}
+vf() { cd $HOME/VimWiki && fzf --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' | xargs -r -I % $EDITOR % ;}
+vff() { fzf --multi --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' --marker="~" | xargs -r -I % $EDITOR % ;}
 
 codi() {
   local syntax="${1:-python}"
