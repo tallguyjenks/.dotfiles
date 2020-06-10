@@ -164,7 +164,7 @@ call plug#end()
                    exe "nnoremap va".item." F".item."vf".item
                 endfor
         " ~~~~~ Check file in shellcheck:
-                map <leader>s :!clear && shellcheck %<CR>
+                map <leader>s :!clear && shellcheck --shell=sh %<CR>
         " ~~~~~ Replace all is aliased to S.
                 nnoremap S :%s//g<Left><Left>
         " ~~~~~ Black hole registry https://bit.ly/2WARts6
