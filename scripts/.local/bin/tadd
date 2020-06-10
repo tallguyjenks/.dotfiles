@@ -4,20 +4,9 @@
 project=$(task _unique project | fzf --prompt="Project: ")
 clear
 
-# Get count of tags user would like to add
-echo "How Many Tags To Add? "
-read -r tag_count
-tags=""
+tags=$(task _unique tags | fzf --multi --prompt="Tags: ")
+tags=$(echo "$tags" | sed 's/^/+/;s/\ /\ +/')
 clear
-
-# Loop through task lists to get tag choices from user
-for ((i=0;i<tag_count;i++)); do
-    count=$((i+1))
-    add=$(task _unique tags | fzf --prompt="Tag #$count: ")
-    if [ -n "$add" ]; then
-        tags="$tags +$add"
-    fi
-done
 
 # Get duedate if ther is one
 echo "What is the due date? Today? [Y/N]"
