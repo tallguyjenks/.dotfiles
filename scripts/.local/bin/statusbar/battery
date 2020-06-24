@@ -31,14 +31,6 @@ else
     warn=" "
 fi
 
-#status="${status//,/}"
-status="${status/#Discharging/}"
-status="${status/#Not Charging/}"
-status="${status/#Charging/}"
-status="${status/#Unknown/}"
-status="${status/#Full/}"
-status="${status} "
-
 # If battery below 10 but is now charging remove warning 
 [ "$status" = "Charging" ] && warn=""
 
@@ -46,7 +38,15 @@ status="${status} "
 [ "$status" = "Discharging" ] && [ -n "$warn" ] && status=""
 
 # if capacity is 0 and battery is not charging then change icon to empty battery and turn off warning
-[ "$capacity" = 0 ] && [ "$status" = "Unknown" ] && status=" " && warn=""
+[ "$capacity" = 0 ] && [ "$status" = "Unknown" ] && status="" && warn=""
+
+#status="${status//,/}"
+status="${status/#Discharging/}"
+status="${status/#Not Charging/}"
+status="${status/#Charging/}"
+status="${status/#Unknown/}"
+status="${status/#Full/}"
+status="${status} "
 
 # Put it all together
 printf "<span color='%s'>%s%s%s</span>\n" "$color" "$status" "$warn" "$capacity%"
