@@ -30,6 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'ChristianChiarulli/codi.vim' " Interactive virtual text
             Plug 'KKPMW/vim-sendtowindow' " Sending code to terminal in vim (uses <space>hjkl)
             Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+            Plug 'wakatime/vim-wakatime' " Developer coding metrics
         "{{{ AESTHETICS }}}
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
