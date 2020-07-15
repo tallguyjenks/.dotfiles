@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
             Plug 'KKPMW/vim-sendtowindow' " Sending code to terminal in vim (uses <space>hjkl)
             Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
             Plug 'wakatime/vim-wakatime' " Developer coding metrics
+            Plug 'jremmen/vim-ripgrep'
         "{{{ AESTHETICS }}}
             Plug 'bling/vim-airline' " Airline Status bar Vim
             Plug 'godlygeek/tabular' " Markdown Tables
@@ -223,6 +224,8 @@ call plug#end()
                 "set cursorline " show me what line im on
                 filetype plugin on " File type detection
                 syntax on " Turn on syntax highlighting
+        " ~~~~~ make 'Y' make sense
+                map Y y$
         " ~~~~~ This maps CTRL-C to T-popes commentary for commenting out code
                 map <C-c> gcc
         " ~~~~~ Mark the 81st and greater columns with obnoxious red

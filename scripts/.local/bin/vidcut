@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+if [ -z "$1" ]; then
+    echo "input file
+start minutes
+start seconds
+end minutes
+end seconds
+output file"
+exit 0
+fi
+
+
 INPUTFILE=$1
 ((STARTTIME = ($2 * 60) + $3 ))
 ((ENDTIME = ($4 * 60) + $5 ))
