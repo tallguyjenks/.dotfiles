@@ -7,4 +7,4 @@ rsync -aAhXvPrz \
     "$HOME" \
     /mnt/ \
     --delete \
-    --exclude=.cache/ --exclude=.vscode-oss/ --exclude=.local/share/vifm/Trash/ --exclude=Youtube --exclude=go/ --exclude=.mozilla/
+    --exclude=.cache/ --exclude=.vscode-oss/ --exclude=.local/share/vifm/Trash/ --exclude=.mozilla/

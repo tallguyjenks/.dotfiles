@@ -1,0 +1,12 @@
+# HTML
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/plain; nvim %s
+
+#PDFs
+application/pdf; /usr/bin/zathura %s pdf
+
+#Images
+image/png; /usr/bin/sxiv %s
+image/jpeg; /usr/bin/sxiv %s
+image/jpg; /usr/bin/sxiv %s
+

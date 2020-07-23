@@ -230,8 +230,8 @@ call plug#end()
                 map <C-c> gcc
         " ~~~~~ Mark the 81st and greater columns with obnoxious red
                 "autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg','\%>120v.\+',-1) "Breaks fzf's display
-                highlight ColorColumn ctermbg=grey
-                call matchadd('ColorColumn','\%81v',100)
+                "highlight ColorColumn ctermbg=grey
+                "call matchadd('ColorColumn','\%81v',100)
         " ~~~~~ Highlight white space and tab characters
                 exec "set listchars=tab:\u00B7\u00B7,trail:\u2423,eol:¬,nbsp:~"
                 set list
@@ -398,3 +398,30 @@ call plug#end()
 "=================================="
         " ~~~~~ Make the autocompiler from vimtex open in zathura
                 let g:vimtex_view_method = 'zathura'
+
+
+function! AdjustWindowHeight(minheight, maxheight)
+  let l = 1
+  let n_lines = 0
+  let w_width = winwidth(0)
+  while l <= line('$')
+    " number to float for division
+    let l_len = strlen(getline(l)) + 0.0
+    let line_width = l_len/w_width
+    let n_lines += float2nr(ceil(line_width))
+    let l += 1
+  endw
+  exe max([min([n_lines, a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
+
+augroup QFWindowHeight
+  au FileType qf
+        \ if winheight('quickfix') + 3 < &lines
+        \ |  call AdjustWindowHeight(1, 5) |
+        \ endif
+augroup end
+
+
+
+
+
